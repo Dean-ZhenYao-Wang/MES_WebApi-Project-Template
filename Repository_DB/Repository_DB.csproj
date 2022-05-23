@@ -1,0 +1,230 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EntityFrameworkRepository_Partial.cs~RFf50bc9e.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IRepository_DB\IRepository_DB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BaseDB.产品定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.产品定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.产品段Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.产品段Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.产品段间的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.产品段间的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户于角色之外可访问菜单Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户于角色之外可访问菜单Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户段技术规范特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户段技术规范特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户段技术规范要求使用的角色Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户段技术规范要求使用的角色Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.角色与角色间的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.角色与角色间的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.角色的可访问菜单Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.角色的可访问菜单Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户要求中要求的角色Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户要求中要求的角色Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户要求特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户要求特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户规范中要求的角色Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户规范中要求的角色Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.用户规范特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.用户规范特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.制造清单使用的物料定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.制造清单使用的物料定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.实际使用设备Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.实际使用设备Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.工作日程定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.工作日程定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.工作日程定义条目特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.工作日程定义条目特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.操作位置Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.操作位置Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.操作位置占用的设备Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.操作位置占用的设备Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.操作位置特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.操作位置特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.操作位置类的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.操作位置类的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.段响应Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.段响应Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料分批量的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料分批量的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料定义特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料定义特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料批量Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料批量Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料批量与物料分批量的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料批量与物料分批量的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料段技术规范Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料段技术规范Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料段技术规范中要求的物料类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料段技术规范中要求的物料类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料类特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料类特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料要求中要求的物料分批量Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料要求中要求的物料分批量Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料要求中要求的物料批量Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料要求中要求的物料批量Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料要求特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料要求特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料规范中要求的物料类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料规范中要求的物料类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.物料规范特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.物料规范特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.生产数据Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.生产数据Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.生产调度Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.生产调度Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.空间定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.空间定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.组织Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.组织Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.维护响应Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.维护响应Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.维护工作通知单Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.维护工作通知单Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备段技术规范中要求使用的设备类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备段技术规范中要求使用的设备类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备段技术规范特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备段技术规范特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备类特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备类特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备要求中要求的设备类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备要求中要求的设备类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备要求特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备要求特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备规范中要求的设备类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备规范中要求的设备类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.设备规范特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.设备规范特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.过程段参数Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.过程段参数Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="BaseDB.过程段间的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseDB.过程段间的组成关系Repository.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,230 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="IRepository_Partial.cs~RFf9f3d2d.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDB\BaseDB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="I产品参数Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I产品参数Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I产品定义与产品段的关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I产品定义与产品段的关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I产品段从属性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I产品段从属性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I产品段相应的过程段Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I产品段相应的过程段Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户与角色间的构成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户与角色间的构成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户于角色之内不可访问菜单Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户于角色之内不可访问菜单Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户所属组织Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户所属组织Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户段技术规范Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户段技术规范Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户段技术规范要求使用的用户Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户段技术规范要求使用的用户Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I角色Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I角色Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I角色特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I角色特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户要求Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户要求Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户要求中要求的用户Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户要求中要求的用户Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户规范Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户规范Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I用户规范中要求的用户Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I用户规范中要求的用户Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I制造清单Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I制造清单Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I制造清单使用的物料类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I制造清单使用的物料类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I实际使用物料Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I实际使用物料Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I工作日程定义条目Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I工作日程定义条目Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I操作位置与操作位置类的关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I操作位置与操作位置类的关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I操作位置类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I操作位置类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I操作位置类特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I操作位置类特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I段要求Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I段要求Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料分批量Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料分批量Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料定义与物料段技术规范的关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料定义与物料段技术规范的关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料批量特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料批量特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料段技术规范特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料段技术规范特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料类与物料定义间的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料类与物料定义间的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料要求Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料要求Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料要求中要求的物料定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料要求中要求的物料定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料要求中要求的物料类Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料要求中要求的物料类Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料规范Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料规范Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I物料规范中要求的物料定义Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I物料规范中要求的物料定义Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I生产参数Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I生产参数Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I生产响应Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I生产响应Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I生产请求Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I生产请求Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I空间定义特性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I空间定义特性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I维护请求Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I维护请求Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I菜单Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I菜单Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备段技术规范Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备段技术规范Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备段技术规范中要求使用的设备Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备段技术规范中要求使用的设备Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备类与设备的关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备类与设备的关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备类间的组成关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备类间的组成关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备要求Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备要求Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备要求中要求的设备Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备要求中要求的设备Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备规范Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备规范Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备规范中要求的设备Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备规范中要求的设备Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I设备间的制造与被制造关系Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I设备间的制造与被制造关系Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I过程段Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I过程段Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I过程段从属性Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I过程段从属性Repository.cs</DependentUpon>
+    </Compile>
+    <Compile Update="I过程段要求的地点Repository.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>I过程段要求的地点Repository.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

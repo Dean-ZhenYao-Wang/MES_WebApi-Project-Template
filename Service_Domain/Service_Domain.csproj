@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EventHandlers\修改人员信息EventHandler.cs" />
+    <Compile Remove="EventHandlers\修改姓名EventHandler.cs" />
+    <Compile Remove="EventHandlers\修改角色名称EventHandler.cs" />
+    <Compile Remove="EventHandlers\新增角色EventHandler.cs" />
+    <Compile Remove="Events\修改人员信息Event.cs" />
+    <Compile Remove="Events\修改姓名Event.cs" />
+    <Compile Remove="Events\修改角色名称Event.cs" />
+    <Compile Remove="Events\新增角色Event.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IRepository_DB\IRepository_DB.csproj" />
+    <ProjectReference Include="..\IService_Domain\IService_Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+</Project>
