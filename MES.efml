@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore context-namespace="B2MML" namespace="B2MML" p1:name="B2MML" p1:Guid="865d825e-6ccd-4a5a-82bf-f635065bdc78" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="$EnumTypes">
+    <EnumType Name="AssemblyRelationshipType" class="AssemblyRelationshipType" p1:Guid="148a24ba-474d-4300-9dfa-7f9088e998e1">
+      <Documentation>
+        <Summary>Defines the type of the relationships</Summary>
+        <LongDescription>Defined types are
+- Permanent: an assembly that is not intended to be split during the production process;
+- Transient: a temporary assembly using during production, such as a pallet of different materials or a batch kit.</LongDescription>
+      </Documentation>
+      <Member Name="Permanent" p1:Guid="8477115e-0408-4b4a-ae57-d9f25b8111e9" />
+      <Member Name="Transient" p1:Guid="ec6b3a51-0ae7-4839-85c4-9f48a4762b10" />
+      <Member Name="Other" p1:Guid="113eba1d-84c2-4260-9e45-57055b978679" />
+    </EnumType>
+    <EnumType Name="AssemblyTypeType" class="AssemblyTypeType" p1:Guid="fb068a62-fe48-4682-8329-f44bbbc7f6a7">
+      <Documentation>
+        <Summary>Defines the type of the assembly.</Summary>
+        <LongDescription>Defined types are
+- physical: the components of the assembly are physically connected or in the same area.
+- logical: the components of the assembly are not necessarily physically connected or in the same area.</LongDescription>
+      </Documentation>
+      <Member Name="Physical" p1:Guid="7ae32bd6-6ce5-4d9e-a959-c357191e53d0" />
+      <Member Name="Logical" p1:Guid="7aace8e0-45c0-443a-bc5c-41cf404468c8" />
+      <Member Name="Other" p1:Guid="a69c6c92-c0de-4f60-ab9c-97a6b8f40ffb" />
+    </EnumType>
+    <EnumType Name="CapabilityTypeType" class="CapabilityTypeType" p1:Guid="d025eb5e-6eaf-4a5b-a455-aae06a058910">
+      <Documentation>
+        <Summary>Defines the type of capability.</Summary>
+        <LongDescription>Defined values are
+- Committed: capacity that is committed for future productive use;
+- Unattainable: capacity that is not attainable for future productive use given the equipment condition, equipment utilization, personnel availability or material availability;
+- Available: capacity that is available for additional future productive use;
+- Used: a historical value that defines the portion of the capacity with acceptable quality;
+- Unused: a historical value that defines the portion of the capacity that was not used or had unacceptable quality; and
+- Total: the sum of used and unused capability or the sum of available, unattainable and committed capability.</LongDescription>
+      </Documentation>
+      <Member Name="Used" p1:Guid="5ae3cda1-2a34-4e57-951b-40074a210c81" />
+      <Member Name="Unused" p1:Guid="28382797-6161-4e86-8021-e401a418762a" />
+      <Member Name="Total" p1:Guid="b9591783-bacd-4e78-9714-c231b836e709" />
+      <Member Name="Committed" p1:Guid="a45c7d9d-6b43-4c7c-a786-0ea8cbe5c104" />
+      <Member Name="Available" p1:Guid="92c0985c-8b33-43f3-9148-efbbe1d9ccd5" />
+      <Member Name="Unattainable" p1:Guid="7445ad65-b4ef-4307-9063-acd405691ea7" />
+      <Member Name="Other" p1:Guid="d425d45e-6ce2-4234-b2e5-673dac4a8a4d" />
+    </EnumType>
+    <EnumType Name="ClassPropertyTypeType" class="ClassPropertyTypeType" p1:Guid="dcac0c05-c840-4e6c-8768-4e5f05a87209">
+      <Documentation>
+        <Summary>Defines the type of the property.</Summary>
+        <LongDescription> Defined types are
+- ClassType: the property value is defined for the class and there is no value associated with an instance;
+- InstanceType: the property value of the class is undefined; and
+- DefaultType: the property value is defined for the class as the default instance value, but individual instances of the class may redefine specific values.</LongDescription>
+      </Documentation>
+      <Member Name="ClassType" p1:Guid="cc69e830-f882-4603-a6d0-2a6add3eb6db" />
+      <Member Name="InstanceType" p1:Guid="8b3893df-b07d-427f-9ce8-a09ef1f19fc1" />
+      <Member Name="DefaultType" p1:Guid="75af370e-6a1b-4e9e-863c-5d47e2ee97db" />
+      <Member Name="Other" p1:Guid="a8015425-4d31-42eb-a9ff-27eb468b2f73" />
+    </EnumType>
+    <EnumType Name="DataTypeType" class="DataTypeType" p1:Guid="5c14ed58-0319-4ff3-b185-5fe0c9dac4b6">
+      <Member Name="AmountType" p1:Guid="1fca2f91-2013-45f9-9c7f-86afd94580d3" />
+      <Member Name="BinaryObjectType" p1:Guid="eaed09b0-0c8c-450f-8d2c-d104f215a963" />
+      <Member Name="CodeType" p1:Guid="8c82d68c-7f4b-4dbf-8be5-407964c95b95" />
+      <Member Name="DateTimeType" p1:Guid="3ef8b1f6-6701-4101-bad7-5579da16b3a0" />
+      <Member Name="IdentifierType" p1:Guid="4c0444bc-415c-4bb7-8275-3e6d1ec73d7a" />
+      <Member Name="IndicatorType" p1:Guid="9ddf33d5-2f49-4f3f-9e92-43ea481a861f" />
+      <Member Name="MeasureType" p1:Guid="92405298-4754-4fc5-b308-5b03c769df16" />
+      <Member Name="NumericType" p1:Guid="1dc70b62-9e4c-4fd6-be29-3a7c7d842c54" />
+      <Member Name="QuantityType" p1:Guid="c4a45534-613a-4d51-aaca-48b08339edfb" />
+      <Member Name="TextType" p1:Guid="1dae3ac3-d465-4092-85c9-e72670f74837" />
+      <Member Name="String" p1:Guid="b33e816c-d4b7-4648-b382-89c41713ea0c" />
+      <Member Name="Byte" p1:Guid="d4354b39-e962-473e-ab04-79b2f87a663d" />
+      <Member Name="UnsignedByte" p1:Guid="64fc3881-6b73-4ed2-a4f8-330ad2c8fbac" />
+      <Member Name="Binary" p1:Guid="438c6e15-11da-48ec-8525-b034d1c5905f" />
+      <Member Name="Integer" p1:Guid="dd505e4a-3d2a-47a1-b472-b19a96082f3e" />
+      <Member Name="PositiveInteger" p1:Guid="3c254be7-fa52-42b2-a828-0d72ae28b248" />
+      <Member Name="NegativeInteger" p1:Guid="27c28658-8145-4798-b2a6-4abf5977c9d2" />
+      <Member Name="NonNegativeInteger" p1:Guid="e36d178d-9070-4dda-8e46-725c826d7973" />
+      <Member Name="NonPositiveInteger" p1:Guid="b9a6f09c-f84d-457d-9c05-97fff711a5c2" />
+      <Member Name="Int" p1:Guid="a2e8c4b5-001f-43c2-86e1-8eb114ec3215" />
+      <Member Name="UnsignedInt" p1:Guid="7f9f1563-61bf-41b6-a17f-9bbea153f8e8" />
+      <Member Name="Long" p1:Guid="dfcccbd6-4f9e-44b9-beea-5e5afad77929" />
+      <Member Name="UnsignedLong" p1:Guid="95550cd3-1a46-45bb-8cab-37ce05459703" />
+      <Member Name="Short" p1:Guid="a1ccd9ca-ea11-4733-a533-811ac9e25e9e" />
+      <Member Name="UnsignedShort" p1:Guid="8a752b6c-1590-48ec-a524-9e33d870c053" />
+      <Member Name="Decimal" p1:Guid="2e070174-acc1-4a6f-ae1a-7b6f15653110" />
+      <Member Name="Float" p1:Guid="575f0649-18ac-410c-be3b-4c3859395337" />
+      <Member Name="Double" p1:Guid="0d70b401-1cff-4708-a375-9ba20f26c114" />
+      <Member Name="Boolean" p1:Guid="759c2a91-3437-4f0b-8907-0cf3985b892d" />
+      <Member Name="Time" p1:Guid="4bf69609-e2d3-4852-8838-25e2434f470d" />
+      <Member Name="TimeInstant" p1:Guid="0225928d-fd59-4953-8291-a592b8189632" />
+      <Member Name="TimePeriod" p1:Guid="89748b6c-5daa-4916-93d7-24d23568beea" />
+      <Member Name="Duration" p1:Guid="4663cbb2-58ec-4919-9abd-1aceba1ba6b5" />
+      <Member Name="Date" p1:Guid="7ebbe21f-6cda-455e-8c1e-63ca09c77fb1" />
+      <Member Name="DateTime" p1:Guid="af51b4f4-dc30-40eb-9d0b-18c815b2b439" />
+      <Member Name="Month" p1:Guid="70ad8bae-2328-40fe-9961-9cb2019fd041" />
+      <Member Name="Year" p1:Guid="b5597729-a275-4c78-acdd-43b4c8d845d5" />
+      <Member Name="Century" p1:Guid="b59eb280-c3d5-43a5-9c12-f8585183c7ee" />
+      <Member Name="RecurringDay" p1:Guid="9327f203-1a6e-4ebe-a788-da9d2a683623" />
+      <Member Name="RecurringDate" p1:Guid="457fba5b-fbea-4d83-8a47-95cdb09d8fa5" />
+      <Member Name="RecurringDuration" p1:Guid="cd126a69-28ee-4c51-b0f0-c84c3eb4f47d" />
+      <Member Name="Name" p1:Guid="92a1f312-48e3-4891-9f3a-6e9c146d0a99" />
+      <Member Name="QName" p1:Guid="37c712e9-7f7c-4df7-b9c6-208d789644ea" />
+      <Member Name="NCName" p1:Guid="8547d179-fcd1-40ef-bba6-e4a667af0c23" />
+      <Member Name="UriReference" p1:Guid="8eff3a43-65de-41de-b564-5ce9bb5b42b0" />
+      <Member Name="Language" p1:Guid="6f37848c-bfc7-4cd9-99c4-6105db04648b" />
+      <Member Name="ID" p1:Guid="9b93deee-6a03-4311-86cc-e3d14d994b58" />
+      <Member Name="IDREF" p1:Guid="21e0bf32-0fe3-42f5-be74-8ad606f88a83" />
+      <Member Name="IDREFS" p1:Guid="42bef1d8-db4c-4e18-8f81-ec2fda2e2f79" />
+      <Member Name="ENTITY" p1:Guid="ea651e7f-9f13-4c02-b6bb-5a04721094bf" />
+      <Member Name="ENTITIES" p1:Guid="7a035a70-79a8-4160-a929-ca6b0c344757" />
+      <Member Name="NOTATION" p1:Guid="b8bccf4e-71bd-4f86-bd43-8c970c5a07ed" />
+      <Member Name="NMTOKEN" p1:Guid="11b7f388-fd68-4d69-bfbe-7669c4c6dd81" />
+      <Member Name="NMTOKENS" p1:Guid="50aa050e-4b37-4dbf-b227-f5c9a4cc9a19" />
+      <Member Name="Enumeration" p1:Guid="900c6ddc-1603-47f4-981e-7555e982713e" />
+      <Member Name="SVG" p1:Guid="2958d5dc-c275-4567-9f4c-82cf3b10f3ff" />
+      <Member Name="Other" p1:Guid="e517d982-c3ef-4fdd-9f83-ac5b305cc595" />
+    </EnumType>
+    <EnumType Name="DefinitionTypeType" class="DefinitionTypeType" p1:Guid="2abf9521-f84a-4255-b105-f8e79207e96b">
+      <Documentation>
+        <Summary>Defines the type of the definition of a process segment, operations definition, or operations segment.</Summary>
+        <LongDescription>Defined types are:
+-	Pattern: a segment or definition used as a template for other segments or definitions;
+-	Instance: a segment or definition that may be directly scheduled and tracked.</LongDescription>
+      </Documentation>
+      <Member Name="Pattern" p1:Guid="d4e5ec8b-ddf2-4962-9f1e-a7eee3d55f41" />
+      <Member Name="Instance" p1:Guid="1424265f-bc30-4c2c-84f0-92d79f9bf698" />
+    </EnumType>
+    <EnumType Name="DependencyType" class="DependencyType" p1:Guid="76c49342-8415-4810-b87e-94ce2fdb44c6">
+      <Documentation>
+        <Summary>Defines an execution dependency constraint of two elements.</Summary>
+        <LongDescription>Defined values are (explained using dependency type between element A and element B)
+- at start: start B at A start;
+- after start: start B after A start;
+- after end: start B after A end;
+- not follow: B cannot follow A;
+- possible parallel: B may run in parallel to A;
+- not in parallel: B may not run in parallel to A;
+- no later after start: start B no later than dependency factor after A start:
+- no earlier after start: start B no earlier than dependency factor after A start;
+- no later after end: start B no later than dependency factor after A end;
+- no earlier after end: B no earlier than dependency factor after A end.</LongDescription>
+      </Documentation>
+      <Member Name="NotFollow" p1:Guid="f10168dd-ea01-4d49-bb19-0966535198a4" />
+      <Member Name="PossibleParallel" p1:Guid="904043f0-d7cf-44c8-a7eb-5d20d1d14459" />
+      <Member Name="NotInParallel" p1:Guid="905aca22-19fd-4df2-90ee-fc1f46418235" />
+      <Member Name="AtStart" p1:Guid="ef0f7195-9b95-4104-a32a-bda38c46a6b4" />
+      <Member Name="AfterStart" p1:Guid="67abc034-43ad-4774-9ca7-b796f51d3e5c" />
+      <Member Name="AfterEnd" p1:Guid="58426641-1581-4509-8534-6d16f75d27b3" />
+      <Member Name="NoLaterAfterStart" p1:Guid="5c9e0053-fec6-4ce0-89fa-ccc5a624a989" />
+      <Member Name="NoEarlierAfterStart" p1:Guid="c972214a-d816-4d82-8a31-87920de9e203" />
+      <Member Name="NoLaterAfterEnd" p1:Guid="97b764b0-dd63-459a-862d-fb59424269df" />
+      <Member Name="NoEarlierAfterEnd" p1:Guid="86032e0c-1070-4259-b72c-96ff0049328b" />
+      <Member Name="Other" p1:Guid="7acb4633-04e7-46b8-bd13-306398d5e1aa" />
+    </EnumType>
+    <EnumType Name="DispositionType" class="DispositionType" p1:Guid="e0dcbc38-1ddf-443f-84bd-908da7e42fa7">
+      <Documentation>
+        <Summary>Defines Planning and logistics disposition of a material lot or assembly of material lots.</Summary>
+        <LongDescription>Defined values for the disposition of a material lot are
+- Planned: a material lot that does not yet physically exist, is assigned to an operations request (segment requirement) or work request (Part 4 object) or job order (Part 4 object);
+- In process: the material lot is in the process of being worked on;
+- Restricted: a material lot is not permitted for normal use due to a restriction condition.
+	EXAMPLE 5 A material lot can be awaiting a quality decision or a material lot can be physically inaccessible.
+- Unrestricted:  material lot is permitted for normal use without restriction; and
+- Closed:   material lot has been reconciled as completely consumed, sold or disposed of.</LongDescription>
+      </Documentation>
+      <Member Name="Planned" p1:Guid="2fed40f5-bf84-4ff9-aa5d-c95edb1fdeac" />
+      <Member Name="In_Process" p1:Guid="7769b00a-7d5d-4fd9-ab2b-3163bda7e277" />
+      <Member Name="Restricted" p1:Guid="89c42dc7-32b1-4c83-8e82-1eed6a211ae8" />
+      <Member Name="UnRestricted" p1:Guid="5d4ac71b-293a-4527-b9b2-1251d623f35f" />
+      <Member Name="Closed" p1:Guid="8e7c6a29-c7fd-46d3-b284-f880f0356ff9" />
+      <Member Name="Other" p1:Guid="1055c6d6-9279-4445-a837-69421f8692fd" />
+    </EnumType>
+    <EnumType Name="EnterpriseFunctionType" class="EnterpriseFunctionType" p1:Guid="f001ae18-aeb9-4a97-9a02-4289fd90465f">
+      <Documentation>
+        <Summary>Defines the enterprise function of the operations event publisher.</Summary>
+        <LongDescription>Defined values from Part 1 Functional Model are
+order processing, operations scheduling, production control, material and energy control,
+procurement, quality assurance, product inventory control, product cost accounting,
+product shipping administration, maintenance management, marketing and sales, RD, and engineering.</LongDescription>
+      </Documentation>
+      <Member Name="Order_Processing" p1:Guid="302be731-f914-4cba-92e4-bb061b4870d7" />
+      <Member Name="Operations_Scheduling" p1:Guid="9e95c64c-dcee-47e3-aff2-e21679b4a4ee" />
+      <Member Name="Production_Control" p1:Guid="7dd6f70b-dd4e-4091-bcdd-8b6669dbeb62" />
+      <Member Name="Material_And_Energy_Control" p1:Guid="5bc48cee-e0cd-4d3b-937b-76b7d46d7750" />
+      <Member Name="Procurement" p1:Guid="f67e0876-9a8b-473a-be6a-41a8b68c408e" />
+      <Member Name="Quality_Assurance" p1:Guid="eda22a34-140a-46e7-b4b3-aa96a9a0e331" />
+      <Member Name="Product_Inventory_Control" p1:Guid="9c530aca-314b-45c1-9715-fafe6e2bc721" />
+      <Member Name="Product_Cost_Accounting" p1:Guid="83aa7c05-6811-4391-ba5c-3cbb2b6dee7b" />
+      <Member Name="Product_Shipping_Administration" p1:Guid="6b9f185a-fc62-4773-b069-40c8e07345b9" />
+      <Member Name="Maintenance_Management" p1:Guid="b273858a-b7d9-4922-9602-2a05a6581c4f" />
+      <Member Name="Marketing_And_Sales" p1:Guid="776d2b63-e03f-4c99-a960-f86f1c16c617" />
+      <Member Name="Research_And_Development" p1:Guid="116c2aad-ad2b-49e7-b23a-b98dc4b67407" />
+      <Member Name="Engineering" p1:Guid="13e3e805-7962-4e0f-9d33-94c4d9035c2d" />
+      <Member Name="Other" p1:Guid="97f4ceee-3c70-46d7-a66b-78704060c6b0" />
+    </EnumType>
+  </class>
+  <class name="$ComplexTypes">
+    <component class="AmountType" p1:Guid="a2a12b8c-c330-440d-81e0-b91b3820957b">
+      <Documentation>
+        <Summary>used for any element that requires a monetary unit</Summary>
+      </Documentation>
+      <property name="value" type="Decimal" p1:ValidateRequired="true" p1:Guid="0f769520-58c3-4a5f-89d4-0154efa99938">
+        <column name="" />
+      </property>
+      <property name="currencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fd0eee36-5780-4262-8dfc-4e20cf0953e3">
+        <column name="" />
+      </property>
+      <property name="currencyCodeListVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bef56227-f3af-4f95-8f38-c35a63220cbe">
+        <column name="" />
+      </property>
+    </component>
+    <component class="BinaryObjectType" p1:Guid="b46202e5-3deb-4ed1-9934-108af37adcd2">
+      <Documentation>
+        <Summary>used for any element that requires a set of finite length sequence of octets</Summary>
+      </Documentation>
+      <property name="value" type="Blob" p1:ValidateRequired="true" p1:Guid="ffcf6b99-5db5-49a5-afb8-81bdb7a4cd8c">
+        <column name="" />
+      </property>
+      <property name="format" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9f28e9ae-690d-4724-8c40-fa765535b948">
+        <column name="" />
+      </property>
+      <property name="mimeCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8cd426a9-e573-4842-afdd-cff2c8daf1f9">
+        <column name="" />
+      </property>
+      <property name="encodingCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fa624a90-26c1-4a41-a88f-0d685b90e49f">
+        <column name="" />
+      </property>
+      <property name="characterSetCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="45cf6268-ca26-4806-bc26-a919db2eecba">
+        <column name="" />
+      </property>
+      <property name="uri" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="aed6c13f-c763-466e-a5e8-b7631046343d">
+        <column name="" />
+      </property>
+      <property name="filename" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="88ed8079-3662-46a8-be1a-3e411e5f6dee">
+        <column name="" />
+      </property>
+    </component>
+    <component class="CodeType" p1:Guid="c6f30a5e-0d8b-4e79-b330-0d5045878fe3">
+      <Documentation>
+        <Summary>used for any enumerated strings</Summary>
+      </Documentation>
+      <property name="value" type="String" p1:ValidateRequired="true" p1:Guid="6b53fd8b-8155-4f70-bcfd-d20c9953df96">
+        <column name="" />
+      </property>
+      <property name="listID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="08bde4ec-1a78-4f57-bd80-6141986afe62">
+        <column name="" />
+      </property>
+      <property name="listAgencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="141dc277-c39f-4421-9ea7-763a31a79617">
+        <column name="" />
+      </property>
+      <property name="listAgencyName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7d7596e9-d467-4158-ad40-7619879c031d">
+        <column name="" />
+      </property>
+      <property name="listName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5d8c8e98-f329-44f3-8eee-f01349444b03">
+        <column name="" />
+      </property>
+      <property name="listVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9c51064e-b04f-4f5f-8592-7a672491459f">
+        <column name="" />
+      </property>
+      <property name="name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8c08b649-5e06-4240-8045-9953bd68ef7d">
+        <column name="" />
+      </property>
+      <property name="languageID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dcc75835-cc70-4775-a888-c2d1ab777ed5">
+        <column name="" />
+      </property>
+      <property name="listURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4cfe917e-16ab-4013-b75e-08dfa16b3d80">
+        <column name="" />
+      </property>
+      <property name="listSchemeURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="eb008d64-5cfa-499a-8c4b-369d88d947ac">
+        <column name="" />
+      </property>
+    </component>
+    <component class="DateTimeType" p1:Guid="7178d4ac-ed0c-471d-9fd3-f236fd14a3a9">
+      <Documentation>
+        <Summary>used for any date and/or time representations</Summary>
+      </Documentation>
+      <property name="value" type="DateTime" p1:ValidateRequired="true" p1:Guid="7c242d99-71c0-4d4b-abf7-c7b9dd9056b4">
+        <column name="" />
+      </property>
+      <property name="format" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0493dd58-c95e-4922-a315-49ab47e6b207">
+        <column name="" />
+      </property>
+    </component>
+    <component class="IdentifierType" p1:Guid="6f75155f-1280-4c0d-a50d-9ac0f99768c1">
+      <Documentation>
+        <Summary>used for any string used to identify an element</Summary>
+      </Documentation>
+      <property name="value" type="String" p1:ValidateRequired="true" p1:Guid="7124e5b6-4f71-462c-94fe-0d0002c0c122">
+        <column name="" />
+      </property>
+      <property name="schemeID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f5723c4a-7177-4138-9f12-c72bb661fe14">
+        <column name="" />
+      </property>
+      <property name="schemeName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1920718e-854b-49d3-8bf1-5288a79d24ff">
+        <column name="" />
+      </property>
+      <property name="schemeAgencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="09808e83-3dfa-4878-9957-62a26e701734">
+        <column name="" />
+      </property>
+      <property name="schemeAgencyName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c2872907-59dc-4d76-8cf1-bb7a8fcf0e22">
+        <column name="" />
+      </property>
+      <property name="schemeVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="27c12f35-f9eb-4089-ad05-9fae370054e4">
+        <column name="" />
+      </property>
+      <property name="schemeDataURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ba2d25f7-baac-4955-975b-19649ffc1a92">
+        <column name="" />
+      </property>
+      <property name="schemeURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f25de0c4-ed48-4525-b0b8-0b169d298f7e">
+        <column name="" />
+      </property>
+    </component>
+    <component class="IndicatorType" p1:Guid="06d3f91b-161c-4230-a6c8-5fbdac805620">
+      <Documentation>
+        <Summary>used for any boolean element</Summary>
+      </Documentation>
+      <property name="value" type="Boolean" p1:ValidateRequired="true" p1:Guid="3d8e6101-8e63-4e40-baa5-86f8d8bd49d2">
+        <column name="" />
+      </property>
+    </component>
+    <component class="MeasureType" p1:Guid="3ddff38f-8086-4362-bc03-1518dfd074f3">
+      <Documentation>
+        <Summary>used for any element that requires a numerical value with a unit of measure</Summary>
+      </Documentation>
+      <property name="value" type="String" p1:ValidateRequired="true" p1:Guid="2f5a78d8-cb0c-49b8-adb8-f9afc33bcc34">
+        <column name="" />
+      </property>
+      <property name="unitCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a7cf92c2-af3a-4a92-bc58-4ed208c308fa">
+        <column name="" />
+      </property>
+      <property name="unitCodeListVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2da616ac-19c2-4c4c-9a13-2ad2c1d5e22f">
+        <column name="" />
+      </property>
+    </component>
+    <component class="NameType" p1:Guid="846c5279-ecbf-4b06-b940-3f8b934d3f0d">
+      <Documentation>
+        <Summary>used for any element that requires common name</Summary>
+      </Documentation>
+      <property name="value" type="String" p1:ValidateRequired="true" p1:Guid="590f0e06-3a06-4191-8c3f-cc824ed23b41">
+        <column name="" />
+      </property>
+      <property name="languageID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="816096ba-d0f3-4068-8edd-4446b8b905ba">
+        <column name="" />
+      </property>
+    </component>
+    <component class="NumericType" p1:Guid="b57fa5a6-12d8-4c5e-b2fc-dd2e91dbe834">
+      <Documentation>
+        <Summary>used for any element that requires a numerical value</Summary>
+      </Documentation>
+      <property name="value" type="Decimal" p1:ValidateRequired="true" p1:Guid="5f3e0da4-19c1-48aa-bd74-28a93937b2bd">
+        <column name="" />
+      </property>
+      <property name="format" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="65db5477-471e-4b6b-8cbb-3efb0a092005">
+        <column name="" />
+      </property>
+    </component>
+    <component class="QuantityType" p1:Guid="e5a4a48c-5500-40b6-84bf-7d1f168e771b">
+      <Documentation>
+        <Summary>used for any element that requires a counted number of non monetary units</Summary>
+      </Documentation>
+      <property name="value" type="Decimal" p1:ValidateRequired="true" p1:Guid="29cd989a-f287-40bb-96f7-36f2ae53b1b5">
+        <column name="" />
+      </property>
+      <property name="unitCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3fb3132c-fdb0-4105-892c-b6359779edb2">
+        <column name="" />
+      </property>
+      <property name="unitCodeListID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="77df1fc1-cbed-44e8-ae1c-2181bdd1515c">
+        <column name="" />
+      </property>
+      <property name="unitCodeListAgencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="01a44873-1c9d-404d-9744-5169a122bab2">
+        <column name="" />
+      </property>
+      <property name="unitCodeListAgencyName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6af8ca01-6212-4934-b325-9f042a5ef560">
+        <column name="" />
+      </property>
+    </component>
+    <component class="TextType" p1:Guid="416080c1-b5e8-4724-85ae-ddb4f70c9af2">
+      <Documentation>
+        <Summary>used for any element that requires a string value</Summary>
+      </Documentation>
+      <property name="value" type="String" p1:ValidateRequired="true" p1:Guid="e5e79c6b-edf5-4881-9ee0-343c613c316c">
+        <column name="" />
+      </property>
+      <property name="languageID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="81ad1a2f-1b51-43c6-be71-6c7518a9fbd5">
+        <column name="" />
+      </property>
+    </component>
+    <component class="AnyGenericValueType" p1:Guid="625f55d4-19ba-4036-92ff-5d3014dd2988">
+      <property name="value" type="String" p1:ValidateRequired="true" p1:Guid="b270b4d0-877d-4c14-a8e0-de967643a4be">
+        <column name="" />
+      </property>
+      <property name="currencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bd617ee9-ceb1-4f89-8842-48d1efc26d1d">
+        <column name="" />
+      </property>
+      <property name="currencyCodeListVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cddf9993-f235-4e8e-b0b2-c04b99ec015d">
+        <column name="" />
+      </property>
+      <property name="encodingCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6d24bda0-07ca-48cc-8904-76e8c28fcaca">
+        <column name="" />
+      </property>
+      <property name="format" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e98a99aa-a8bd-4399-ab2e-597e7e9083c9">
+        <column name="" />
+      </property>
+      <property name="characterSetCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0896fd3b-3455-4ccd-8ec8-51d6d68c432e">
+        <column name="" />
+      </property>
+      <property name="listID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e0f42417-15f6-46dd-84c3-33c33333fb12">
+        <column name="" />
+      </property>
+      <property name="listAgencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9f29cd00-1c47-47c7-b61b-a1a27dfc3e19">
+        <column name="" />
+      </property>
+      <property name="listAgencyName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="35e8fa6e-4bfc-4461-8e50-6db784f2a26a">
+        <column name="" />
+      </property>
+      <property name="listName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d88b2f87-f42a-45e4-b99d-999d6885e2ab">
+        <column name="" />
+      </property>
+      <property name="listVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3d578f8b-48f1-43e7-bd54-465600f7d0c5">
+        <column name="" />
+      </property>
+      <property name="languageID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9b49ac95-41bb-4605-a8f7-364729a884f6">
+        <column name="" />
+      </property>
+      <property name="languageLocaleID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2ac47c21-4c4b-4ef3-931e-5113326699aa">
+        <column name="" />
+      </property>
+      <property name="listURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b09cf6d2-3b45-4cb1-9513-2561eeb6c7ca">
+        <column name="" />
+      </property>
+      <property name="listSchemaURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5acae28e-4699-4755-9e01-e6869eb2e26d">
+        <column name="" />
+      </property>
+      <property name="mimeCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e9172ed9-f78f-4bd7-b0b9-e53792c9bfaa">
+        <column name="" />
+      </property>
+      <property name="name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="26238ae0-cf5b-49c4-bddd-dd3819406d46">
+        <column name="" />
+      </property>
+      <property name="schemaID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="381937cb-4daa-4ba3-989c-34b5aed80421">
+        <column name="" />
+      </property>
+      <property name="schemaName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="459d624a-3178-43c3-b170-19782936e6c6">
+        <column name="" />
+      </property>
+      <property name="schemaAgencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="171ec474-8c4b-4740-8d36-9b31197994c4">
+        <column name="" />
+      </property>
+      <property name="schemaAgencyName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f87ad2c0-7cf7-4030-9b0d-35895a96b85e">
+        <column name="" />
+      </property>
+      <property name="schemaVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1e0de701-08a2-42db-a27e-140a1c254270">
+        <column name="" />
+      </property>
+      <property name="schemaDataURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f062f3ca-7191-43da-add0-92c89e004d27">
+        <column name="" />
+      </property>
+      <property name="schemaURI" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e9c44e2b-7159-48c7-be62-3464ee4daf31">
+        <column name="" />
+      </property>
+      <property name="unitCode" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cb7b81cf-a132-4b50-8705-02c74121a920">
+        <column name="" />
+      </property>
+      <property name="unitCodeListID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="02ba8a70-a575-44ac-9f48-02a2c298c79b">
+        <column name="" />
+      </property>
+      <property name="unitCodeListAgencyID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8fae37b9-4521-43e9-80c2-569e4acafd37">
+        <column name="" />
+      </property>
+      <property name="unitCodeListAgencyName" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="96c90bf7-de22-4e4f-9f74-863b207b1399">
+        <column name="" />
+      </property>
+      <property name="unitCodeListVersionID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="18eecf92-5415-4ebd-855b-f15338a0ba4b">
+        <column name="" />
+      </property>
+      <property name="filename" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6472ec1b-7aee-4add-ab34-10494c408e42">
+        <column name="" />
+      </property>
+      <property name="uri" type="Uri" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3e1125fa-e978-400f-a3ee-53fd28f6a5a6">
+        <column name="" />
+      </property>
+    </component>
+    <component class="CauseType" p1:Guid="66e0e961-3d39-43ce-bbf6-c28ea40b8a8f" p1:ComplexTypeBase="CodeType" />
+    <component class="ConfidenceFactorType" p1:Guid="930ea54d-17c7-488a-b92c-fca9cf323d69" p1:ComplexTypeBase="IdentifierType" />
+    <component class="DescriptionType" p1:Guid="5b3dd4d8-73f2-48da-9206-45d2cc7efa7f" p1:ComplexTypeBase="TextType" />
+    <component class="DurationType" p1:Guid="5afeb346-6836-490b-a42d-6736aa695496">
+      <property name="value" type="Int64" p1:ValidateRequired="true" p1:Guid="f1e60160-8ea0-47de-82b6-0174d17851da">
+        <column name="" />
+      </property>
+    </component>
+  </class>
+  <class name="EquipmentAssetMappingType" entity-set="EquipmentAssetMappingTypes" table="EquipmentAssetMappingType" p1:Guid="3764cfbc-c185-465b-965d-f88dcaf3ce94">
+    <id name="Key" type="Guid" p1:ValidateRequired="true" p1:Guid="5510b44a-6f1b-4dc6-9f12-6002d1b407da">
+      <column name="" />
+    </id>
+    <component name="EquipmentID" class="IdentifierType" p1:ValidateRequired="false" p1:Guid="b1637abe-d15b-4136-ba36-a4d5add0bd7c">
+      <property name="value" />
+      <property name="schemeID" />
+      <property name="schemeName" />
+      <property name="schemeAgencyID" />
+      <property name="schemeAgencyName" />
+      <property name="schemeVersionID" />
+      <property name="schemeDataURI" />
+      <property name="schemeURI" />
+    </component>
+    <component name="PhysicalAssetID" class="IdentifierType" p1:ValidateRequired="false" p1:Guid="742c33ab-1ded-4d95-9f9b-f0392217483f">
+      <property name="value" />
+      <property name="schemeID" />
+      <property name="schemeName" />
+      <property name="schemeAgencyID" />
+      <property name="schemeAgencyName" />
+      <property name="schemeVersionID" />
+      <property name="schemeDataURI" />
+      <property name="schemeURI" />
+    </component>
+  </class>
+</efcore>

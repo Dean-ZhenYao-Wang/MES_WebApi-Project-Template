@@ -1,3 +1,4 @@
+using BaseDB;
 using FluentValidation.AspNetCore;
 using IGeekFan.AspNetCore.Knife4jUI;
 using MediatR;
@@ -19,8 +20,6 @@ using System.Reflection;
 using System.Text;
 using Util;
 using Util.Helper;
-using Util.Middleware;
-using Util.Model;
 
 namespace WebApi
 {
@@ -103,7 +102,7 @@ namespace WebApi
             });
             var assemblies = ReflectionHelper.GetAllReferencedAssemblies();
             services.RunModuleInitializers(assemblies);
-            services.AddDbContext<BaseDB.BaseDbContext>(options =>
+            services.AddDbContext<BaseDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:BaseDbConnectionString"]);
             });
@@ -111,8 +110,8 @@ namespace WebApi
             using (IServiceScope scope = services.BuildServiceProvider().CreateScope())
             {
                 var service = scope.ServiceProvider;
-                var context = service.GetRequiredService<BaseDB.BaseDbContext>();
-                BaseDB.DbInitializer.Initialize(context);
+                var context = service.GetRequiredService<BaseDbContext>();
+                DbInitializer.Initialize(context);
             }
             services.AddMediatR(assemblies.ToArray());
             var jwtConfig = Configuration.GetSection("Jwt");

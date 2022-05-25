@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MES", "CoreComponents\MES.csproj", "{088258A9-D6B8-40E6-9EF4-DF3E6C9B52C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{9F12FDEF-AC8B-4D3D-BEC1-95A51A47869B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F12FDEF-AC8B-4D3D-BEC1-95A51A47869B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F12FDEF-AC8B-4D3D-BEC1-95A51A47869B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088258A9-D6B8-40E6-9EF4-DF3E6C9B52C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088258A9-D6B8-40E6-9EF4-DF3E6C9B52C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088258A9-D6B8-40E6-9EF4-DF3E6C9B52C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088258A9-D6B8-40E6-9EF4-DF3E6C9B52C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{63DCCB65-D802-483E-8971-084ED5FAD910} = {09EBC9B2-62DE-41ED-9675-AA47E162F6F1}
 		{E24A06AF-A685-4E37-AEAC-82028AF709B1} = {49E1BDBC-814B-4880-A8D7-A405F2E523F3}
 		{9F12FDEF-AC8B-4D3D-BEC1-95A51A47869B} = {0E9AB98C-6ABB-47A6-9355-72853CAF4E44}
+		{088258A9-D6B8-40E6-9EF4-DF3E6C9B52C4} = {09EBC9B2-62DE-41ED-9675-AA47E162F6F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FAE8E774-CA9B-4939-8715-B0AF0BE6E4D2}

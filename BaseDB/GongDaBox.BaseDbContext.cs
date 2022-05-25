@@ -18,5 +18,6 @@ namespace BaseDB
 
     public partial class BaseDbContext
     {
+        public DbSet<HierarchyScopeType> HierarchyScopes { get; set; }
     }
 }

@@ -6,7 +6,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Controllers\MenuManageController.cs~RF61bdc44.TMP" />
+	  <Compile Remove="Controllers\**" />
+	  <Content Remove="Controllers\**" />
+	  <EmbeddedResource Remove="Controllers\**" />
+	  <None Remove="Controllers\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -26,7 +29,6 @@
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\Repository_DB\Repository_DB.csproj" />
 	  <ProjectReference Include="..\Service_Domain\Service_Domain.csproj" />
 	</ItemGroup>
 

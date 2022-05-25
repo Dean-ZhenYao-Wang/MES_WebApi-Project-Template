@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description></Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\**" />
+    <Compile Remove="CoreComponents\**" />
+    <Compile Remove="InformationObject\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <EmbeddedResource Remove="CoreComponents\**" />
+    <EmbeddedResource Remove="InformationObject\**" />
+    <None Remove="Common\**" />
+    <None Remove="CoreComponents\**" />
+    <None Remove="InformationObject\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Util\Util.csproj" />
+  </ItemGroup>
+
+</Project>
