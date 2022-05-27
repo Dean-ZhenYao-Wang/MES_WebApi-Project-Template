@@ -43,10 +43,12 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region 使用System.Text.Json时，可将此处内容取消注释，此处的作用是：将json中的中文字符不做转义
             //var fieldInfo = typeof(JsonSerializerOptions).GetField("s_defaultOptions", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Instance);
 
             //var options = fieldInfo.GetValue(null) as JsonSerializerOptions;
             //options.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
+            #endregion
 
             services.AddControllers(options =>
             {
