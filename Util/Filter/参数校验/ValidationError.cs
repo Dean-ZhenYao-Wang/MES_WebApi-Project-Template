@@ -9,7 +9,6 @@ namespace Util
             Field = field != string.Empty ? field : null;
             Message = message;
         }
-
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Field { get; }
 

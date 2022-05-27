@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IRepository_DB\IRepository_DB.csproj" />
     <ProjectReference Include="..\IService_Domain\IService_Domain.csproj" />
+    <ProjectReference Include="..\Repository_DB\Repository_DB.csproj" />
   </ItemGroup>
 
   <ItemGroup>

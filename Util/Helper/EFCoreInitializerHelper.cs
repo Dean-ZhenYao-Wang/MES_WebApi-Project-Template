@@ -38,6 +38,5 @@ namespace Microsoft.EntityFrameworkCore
             }
             return services;
         }
-
     }
 }

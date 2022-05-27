@@ -3,13 +3,10 @@ using IRepository_DB;
 using IService_Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Service_Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
-using Util;
 using Util.Model;
 
 namespace WebApi.Controllers.RoleManage
@@ -62,7 +59,7 @@ namespace WebApi.Controllers.RoleManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(删除角色) + "/{roleId}")]
-        public async Task 删除角色(Guid roleId)
+        public async Task 删除角色(string roleId)
         {
             await domainService_Role.删除角色_DBAsync(roleId);
             await SaveAsync();
@@ -89,7 +86,7 @@ namespace WebApi.Controllers.RoleManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(获取指定角色信息) + "/{roleId}")]
-        public async Task<角色> 获取指定角色信息(Guid roleId)
+        public async Task<角色> 获取指定角色信息(string roleId)
         {
             return await domainService_Role.获取指定角色信息_DBAsync(roleId);
         }
@@ -116,7 +113,7 @@ namespace WebApi.Controllers.RoleManage
             /// 需要修改的角色的Id
             /// </summary>
             [Required]
-            public Guid RoleId { get; set; }
+            public string RoleId { get; set; }
 
             /// <summary>
             /// 新的名称
@@ -150,12 +147,12 @@ namespace WebApi.Controllers.RoleManage
             /// 需要设施的角色的Id
             /// </summary>
             [Required]
-            public Guid RoleId { get; set; }
+            public string RoleId { get; set; }
 
             /// <summary>
             /// 此角色的可访问菜单的Id列表
             /// </summary>
-            public List<Guid> List_MenuId { get; set; }
+            public List<string> List_MenuId { get; set; }
         }
     }
 }

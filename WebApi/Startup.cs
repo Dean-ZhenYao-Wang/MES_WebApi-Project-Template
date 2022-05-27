@@ -18,8 +18,13 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
+using System.Threading.Tasks;
 using Util;
 using Util.Helper;
+using Util.Middleware;
 
 namespace WebApi
 {
@@ -27,6 +32,7 @@ namespace WebApi
     {
         private static readonly string thisSolution = "WebApi";
         private static readonly string thisNamespace = $"{thisSolution} WebAPI";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -37,6 +43,10 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //var fieldInfo = typeof(JsonSerializerOptions).GetField("s_defaultOptions", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Instance);
+
+            //var options = fieldInfo.GetValue(null) as JsonSerializerOptions;
+            //options.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
 
             services.AddControllers(options =>
             {
@@ -134,8 +144,20 @@ namespace WebApi
                         ClockSkew = TimeSpan.Zero,//这个是缓冲过期时间，也就是说，即使我们配置了过期时间，这里也要考虑进去，过期时间+缓冲，默认好像是7分钟，你可以直接设置为0
                         RequireExpirationTime = true,
                     };
+                    options.Events = new JwtBearerEvents()
+                    {
+                        OnAuthenticationFailed = context =>
+                        {
+                            if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                            {
+                                context.Response.Headers.Add("Toke-Expired", "true");
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
             services.AddHttpContextAccessor();
+            services.AddScoped<HttpContextHelper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -163,6 +185,7 @@ namespace WebApi
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseHttpContextHelperMiddleware();
 
             app.UseEndpoints(endpoints =>
             {

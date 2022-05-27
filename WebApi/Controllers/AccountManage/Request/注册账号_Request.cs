@@ -27,6 +27,7 @@ namespace WebApi.Controllers.AccountManage.Request
         [Required]
         public string PassWord { get; set; }
     }
+
     public class 注册账号_RequestValidator : AbstractValidator<注册账号_Request>
     {
         public 注册账号_RequestValidator(BaseDB.BaseDbContext dbCtx)

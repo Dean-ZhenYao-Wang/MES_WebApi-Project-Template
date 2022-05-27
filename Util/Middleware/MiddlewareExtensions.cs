@@ -4,10 +4,10 @@ namespace Util.Middleware
 {
     public static class MiddlewareExtensions
     {
-        public static IApplicationBuilder UseHttpContextHelperMiddleware<T>(
+        public static IApplicationBuilder UseHttpContextHelperMiddleware(
             this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<HttpContextHelper<T>>();
+            return builder.UseMiddleware<HttpContextHelper>();
         }
     }
 }

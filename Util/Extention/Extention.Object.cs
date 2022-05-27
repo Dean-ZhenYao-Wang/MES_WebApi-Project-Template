@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml;
 
 namespace Util
 {
@@ -67,37 +68,6 @@ namespace Util
         public static string ToJson(this object obj)
         {
             return JsonConvert.SerializeObject(obj);
-        }
-
-        /// <summary>
-        /// 将对象序列化为XML字符串
-        /// </summary>
-        /// <typeparam name="T">对象类型</typeparam>
-        /// <param name="obj">对象</param>
-        /// <returns></returns>
-        public static string ToXmlStr<T>(this T obj)
-        {
-            string jsonStr = obj.ToJson();
-            System.Xml.XmlDocument xmlDoc = JsonConvert.DeserializeXmlNode(jsonStr);
-            string xmlDocStr = xmlDoc.InnerXml;
-
-            return xmlDocStr;
-        }
-
-        /// <summary>
-        /// 将对象序列化为XML字符串
-        /// </summary>
-        /// <typeparam name="T">对象类型</typeparam>
-        /// <param name="obj">对象</param>
-        /// <param name="rootNodeName">根节点名(建议设为xml)</param>
-        /// <returns></returns>
-        public static string ToXmlStr<T>(this T obj, string rootNodeName)
-        {
-            string jsonStr = obj.ToJson();
-            System.Xml.XmlDocument xmlDoc = JsonConvert.DeserializeXmlNode(jsonStr, rootNodeName);
-            string xmlDocStr = xmlDoc.InnerXml;
-
-            return xmlDocStr;
         }
 
         /// <summary>

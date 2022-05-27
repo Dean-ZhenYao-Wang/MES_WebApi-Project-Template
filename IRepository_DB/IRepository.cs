@@ -7,15 +7,15 @@
 // Changes to this file may cause incorrect behavior and will be lost if
 // the code is regenerated.
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
 
 namespace IRepository_DB
 {
     public partial interface IRepository<T>
     {
         System.Linq.IQueryable<T> All();
+
         void Add(T entity);
+
         void Remove(T entity);
     }
 }

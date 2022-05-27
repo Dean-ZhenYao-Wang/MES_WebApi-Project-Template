@@ -63,6 +63,7 @@ namespace Util.Helper
         }
 
 #pragma warning disable CS8632 // 只能在 "#nullable" 注释上下文内的代码中使用可为 null 的引用类型的注释。
+
         private static Assembly? TryLoadAssembly(string asmPath)
 #pragma warning restore CS8632 // 只能在 "#nullable" 注释上下文内的代码中使用可为 null 的引用类型的注释。
         {
@@ -199,9 +200,10 @@ namespace Util.Helper
             }
         }
 
-        class AssemblyEquality : EqualityComparer<Assembly>
+        private class AssemblyEquality : EqualityComparer<Assembly>
         {
 #pragma warning disable CS8632 // 只能在 "#nullable" 注释上下文内的代码中使用可为 null 的引用类型的注释。
+
             public override bool Equals(Assembly? x, Assembly? y)
 #pragma warning restore CS8632 // 只能在 "#nullable" 注释上下文内的代码中使用可为 null 的引用类型的注释。
             {

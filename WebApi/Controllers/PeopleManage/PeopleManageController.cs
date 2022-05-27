@@ -7,9 +7,7 @@ using Service_Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
-using Util;
 using Util.Model;
 
 namespace WebApi.Controllers.PeopleManage
@@ -51,7 +49,7 @@ namespace WebApi.Controllers.PeopleManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(删除用户))]
-        public async Task 删除用户(List<Guid> listPeopleId)
+        public async Task 删除用户(List<string> listPeopleId)
         {
             await domainService_People.删除用户_DBAsync(listPeopleId);
             await SaveAsync();
@@ -104,12 +102,12 @@ namespace WebApi.Controllers.PeopleManage
             /// <summary>
             /// 所属组织的Id列表
             /// </summary>
-            public List<Guid> List_OrgId { get; set; }
+            public List<string> List_OrgId { get; set; }
 
             /// <summary>
             /// 拥有的角色的Id列表
             /// </summary>
-            public List<Guid> List_RoleId { get; set; }
+            public List<string> List_RoleId { get; set; }
         }
 
         /// <summary>
@@ -121,7 +119,7 @@ namespace WebApi.Controllers.PeopleManage
             /// 被修改人的Id
             /// </summary>
             [Required]
-            public Guid PeopleId { get; set; }
+            public string PeopleId { get; set; }
 
             /// <summary>
             /// 登录账号
@@ -144,12 +142,12 @@ namespace WebApi.Controllers.PeopleManage
             /// <summary>
             /// 所属组织的Id列表
             /// </summary>
-            public List<Guid> List_OrgId { get; set; }
+            public List<string> List_OrgId { get; set; }
 
             /// <summary>
             /// 拥有的角色的Id列表
             /// </summary>
-            public List<Guid> List_RoleId { get; set; }
+            public List<string> List_RoleId { get; set; }
         }
 
         /// <summary>

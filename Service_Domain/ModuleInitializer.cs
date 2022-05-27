@@ -5,7 +5,7 @@ using Util;
 
 namespace Service_Domain
 {
-    class ModuleInitializer : IModuleInitializer
+    internal class ModuleInitializer : IModuleInitializer
     {
         public void Initialize(IServiceCollection services)
         {

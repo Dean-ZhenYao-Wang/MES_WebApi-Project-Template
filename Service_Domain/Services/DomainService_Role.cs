@@ -26,7 +26,7 @@ namespace Service_Domain.Services
         {
             BaseDB.角色 role = new BaseDB.角色()
             {
-                Key = Guid.NewGuid(),
+                Key = Guid.NewGuid().ToString(),
                 名称 = name
             };
             role.记录创建人及创建时间();
@@ -34,17 +34,17 @@ namespace Service_Domain.Services
             return role;
         }
 
-        public async Task 修改角色名称_DBAsync(Guid roleId, string name)
+        public async Task 修改角色名称_DBAsync(string roleId, string name)
         {
-            var role = await 角色.All().Where(m => m.Key == roleId).FirstAsync();
+            var role = await 角色.All().Where(m => m.Key.Equals(roleId)).FirstAsync();
 
             role.名称 = name;
             role.记录修改人及修改时间();
         }
 
-        public async Task 删除角色_DBAsync(Guid roleId)
+        public async Task 删除角色_DBAsync(string roleId)
         {
-            var role = await 角色.All().Where(m => m.Key == roleId).FirstAsync();
+            var role = await 角色.All().Where(m => m.Key.Equals(roleId)).FirstAsync();
             role.删除();
         }
 
@@ -56,18 +56,18 @@ namespace Service_Domain.Services
                 .ToPagedListAsync(pageIndex, pageSize);
         }
 
-        public async Task<角色> 获取指定角色信息_DBAsync(Guid roleId)
+        public async Task<角色> 获取指定角色信息_DBAsync(string roleId)
         {
             return await 角色.All()
-                 .Where(role => role.Key == roleId)
+                 .Where(role => role.Key.Equals(roleId))
                  .AsNoTracking()
                  .FirstAsync();
         }
 
-        public async Task 设置角色可访问菜单_DBAsync(Guid roleId, List<Guid> list_MenuId)
+        public async Task 设置角色可访问菜单_DBAsync(string roleId, List<string> list_MenuId)
         {
             var oldMenu_List = await 角色的可访问菜单.All()
-                .Where(rxm => rxm.IsDelete == false && rxm.角色Key == roleId)
+                .Where(rxm => rxm.IsDelete == false && rxm.角色Key.Equals(roleId))
                 .Select(rxm => rxm)
                 .ToListAsync();
             if (list_MenuId == null || !list_MenuId.Any())
@@ -95,7 +95,7 @@ namespace Service_Domain.Services
                 {
                     var menu = new BaseDB.角色_菜单()
                     {
-                        Key = Guid.NewGuid(),
+                        Key = Guid.NewGuid().ToString(),
                         角色Key = roleId,
                         菜单Key = menuId
                     };

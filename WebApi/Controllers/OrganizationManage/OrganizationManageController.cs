@@ -16,6 +16,7 @@ namespace WebApi.Controllers.OrganizationManage
     public class OrganizationManageController : BaseController
     {
         private readonly IDomainService_Organization domainService_Organization;
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -44,7 +45,7 @@ namespace WebApi.Controllers.OrganizationManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(删除组织) + "/{orgId}")]
-        public async Task 删除组织(Guid orgId)
+        public async Task 删除组织(string orgId)
         {
             await domainService_Organization.删除组织_DBAsync(orgId);
             await SaveAsync();
@@ -59,7 +60,7 @@ namespace WebApi.Controllers.OrganizationManage
         [Route(nameof(修改组织))]
         public async Task 修改组织(修改组织_Dto inputDto)
         {
-            await domainService_Organization.修改组织_DBAsync(inputDto.OrgId,inputDto.编号,inputDto.序号,inputDto.名称, inputDto.全名, inputDto.上一级组织的Id);
+            await domainService_Organization.修改组织_DBAsync(inputDto.OrgId, inputDto.编号, inputDto.序号, inputDto.名称, inputDto.全名, inputDto.上一级组织的Id);
             await SaveAsync();
         }
 
@@ -80,17 +81,20 @@ namespace WebApi.Controllers.OrganizationManage
         {
             [Required]
             public string 名称 { get; set; }
+
             [Required]
             public string 全名 { get; set; }
+
             [Required]
             public string 编号 { get; set; }
+
             [Required]
             public int 序号 { get; set; }
 
             /// <summary>
             /// 父级组织的Id 可为空
             /// </summary>
-            public Guid? 上一级组织的Id { get; set; }
+            public string 上一级组织的Id { get; set; }
         }
 
         /// <summary>
@@ -102,22 +106,24 @@ namespace WebApi.Controllers.OrganizationManage
             /// 组织Id
             /// </summary>
             [Required]
-            public Guid OrgId { get; set; }
-
+            public string OrgId { get; set; }
 
             [Required]
             public string 名称 { get; set; }
+
             [Required]
             public string 全名 { get; set; }
+
             [Required]
             public string 编号 { get; set; }
+
             [Required]
             public int 序号 { get; set; }
 
             /// <summary>
             /// 父级组织的Id 可为空
             /// </summary>
-            public Guid? 上一级组织的Id { get; set; }
+            public string 上一级组织的Id { get; set; }
         }
     }
 }

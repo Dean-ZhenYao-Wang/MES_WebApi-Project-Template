@@ -58,7 +58,7 @@ namespace WebApi.Controllers.MenuManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(Delete) + "/{menuId}")]
-        public async Task Delete(Guid menuId)
+        public async Task Delete(string menuId)
         {
             await domainService_Menu.删除菜单_DBAsync(menuId);
             await SaveAsync();
@@ -71,7 +71,8 @@ namespace WebApi.Controllers.MenuManage
         [HttpGet]
         public async Task<List<菜单>> Get()
         {
-            return await domainService_Menu.获取菜单列表_DBAsync();
+            var data= await domainService_Menu.获取菜单列表_DBAsync();
+            return data;
         }
 
         /// <summary>
@@ -109,7 +110,7 @@ namespace WebApi.Controllers.MenuManage
             /// <summary>
             /// 父级菜单的Id 可为空
             /// </summary>
-            public Guid? 上级菜单Id { get; set; }
+            public string 上级菜单Id { get; set; }
         }
 
         /// <summary>
@@ -121,7 +122,7 @@ namespace WebApi.Controllers.MenuManage
             /// 菜单Id
             /// </summary>
             [Required]
-            public Guid Id { get; set; }
+            public string Id { get; set; }
 
             /// <summary>
             /// 菜单名称
@@ -152,7 +153,7 @@ namespace WebApi.Controllers.MenuManage
             /// <summary>
             /// 父级菜单的Id 可为空
             /// </summary>
-            public Guid? 上级菜单Id { get; set; }
+            public string 上级菜单Id { get; set; }
         }
     }
 }

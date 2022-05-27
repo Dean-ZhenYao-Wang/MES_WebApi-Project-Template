@@ -1,8 +1,10 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 
 namespace Util
 {
@@ -60,16 +62,6 @@ namespace Util
             return Encoding.UTF8.GetString(bytes);
         }
 
-        // <summary>
-        /// 将Json字符串转为JObject
-        /// </summary>
-        /// <param name="jsonStr">Json字符串</param>
-        /// <returns></returns>
-        public static JObject ToJObject(this string jsonStr)
-        {
-            return jsonStr == null ? JObject.Parse("{}") : JObject.Parse(jsonStr.Replace("&nbsp;", ""));
-        }
-
         /// <summary>
         /// 将Json字符串反序列化为对象
         /// </summary>
@@ -78,7 +70,57 @@ namespace Util
         /// <returns></returns>
         public static TEntity ToObject<TEntity>(this string jsonStr)
         {
-            return JsonConvert.DeserializeObject<TEntity>(jsonStr);
+            return JsonSerializer.Deserialize<TEntity>(jsonStr);
+        }
+
+        public static dynamic DeserializeDynamicJsonObject(this string data)
+        {
+            return new JsonTextAccessor(JsonSerializer.Deserialize<JsonElement>(data));
+        }
+    }
+
+    public class JsonTextAccessor : DynamicObject
+    {
+        private readonly JsonElement _content;
+        public JsonTextAccessor(JsonElement content)
+        {
+            _content = content;
+        }
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            result = null;
+            if (_content.TryGetProperty(binder.Name, out JsonElement value))
+            {
+                result = Obtain(value);
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
+        private Object? Obtain(in JsonElement element)
+        {
+            switch (element.ValueKind)
+            {
+                case JsonValueKind.String: return element.GetString();
+                case JsonValueKind.Null: return null;
+                case JsonValueKind.False: return false;
+                case JsonValueKind.True: return true;
+                case JsonValueKind.Number: return element.GetDouble();
+                default: break;
+            }
+
+            if (element.ValueKind == JsonValueKind.Array)
+            {
+                var list = new List<object>();
+                foreach (var item in element.EnumerateArray())
+                {
+                    list.Add(item);
+                }
+                return list;
+            }
+            else return new JsonTextAccessor(element);
         }
     }
 }

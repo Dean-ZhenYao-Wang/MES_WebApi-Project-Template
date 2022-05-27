@@ -18,7 +18,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <Compile Remove="EquipmentModel.cs" />
+    <Compile Remove="MaterialModel.cs" />
+    <Compile Remove="OperationalLocationModel.cs" />
+    <Compile Remove="PersonnelModel.cs" />
+    <Compile Remove="PhysicalAssetModel.cs" />
+    <Compile Remove="ProcessSegmentModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="B2MML-AllExtensions_AllSchemas.cs~RFe69962.TMP" />
+    <None Remove="xwxcevyp.zuf~" />
+    <None Remove="公共组件元素.cs~RF5346f8.TMP" />
   </ItemGroup>
 
   <ItemGroup>

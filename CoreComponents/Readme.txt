@@ -1,0 +1,3 @@
+﻿缺少 TransActionCodeType、BatchProductionRecordEntryType
+
+所有枚举值还需另外建立维护

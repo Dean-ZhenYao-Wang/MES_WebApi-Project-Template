@@ -7,15 +7,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using Service_Domain;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Unicode;
 using System.Threading.Tasks;
 using Util;
-using Util.Model;
 using WebApi.Controllers.AccountManage.Request;
 
 namespace WebApi.Controllers.AccountManage
@@ -34,6 +35,7 @@ namespace WebApi.Controllers.AccountManage
         private readonly IDomainService_Account domainService_Account;
         private readonly IDomainService_People domainService_People;
         private readonly IConfiguration configuration;
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -43,7 +45,6 @@ namespace WebApi.Controllers.AccountManage
             this.domainService_People = domainService_People;
             this.configuration = configuration;
         }
-
 
         /// <summary>
         /// 注册账号
@@ -85,7 +86,15 @@ namespace WebApi.Controllers.AccountManage
             var claims = new Claim[] {
                 new Claim(JwtRegisteredClaimNames.Iss,jwtConfig.GetValue<string>("Iss")),
                 new Claim(JwtRegisteredClaimNames.Aud,jwtConfig.GetValue<string>("Aud")),
-                new Claim("Guid",account.Key.ToString()),
+                new Claim(ClaimTypes.NameIdentifier,account.Key.ToString()),
+                new Claim("currentLoginUser",
+                            JsonConvert.SerializeObject(account//,
+                                //new System.Text.Json.JsonSerializerOptions
+                                //{
+                                //    Encoder=System.Text.Encodings.Web.JavaScriptEncoder.Create(UnicodeRanges.All)
+                                //}
+                            )
+                        )
             };
             SecurityToken securityToken = new JwtSecurityToken(
                 signingCredentials: securityKey,
@@ -95,6 +104,7 @@ namespace WebApi.Controllers.AccountManage
             //生成jwt令牌
             return Success<string>(new JwtSecurityTokenHandler().WriteToken(securityToken));
         }
+
         public class LoginRequest
         {
             public string Token { get; set; }
@@ -110,9 +120,9 @@ namespace WebApi.Controllers.AccountManage
         [Route(nameof(修改密码))]
         public async Task 修改密码(修改密码_Dto inputDto)
         {
-            await domainService_Account.修改密码_DBAsync(HttpContextHelper<MyJWTPayload>.CurrentLoginUser.Key, inputDto.PassWordOne);
+            await domainService_Account.修改密码_DBAsync(CurrentLoginUser.Key, inputDto.PassWordOne);
             await SaveAsync();
-            await Publish(new 修改密码Event(HttpContextHelper<MyJWTPayload>.CurrentLoginUser.Key, inputDto.PassWordOne));
+            await Publish(new 修改密码Event(CurrentLoginUser.Key, inputDto.PassWordOne));
         }
 
         /// <summary>
@@ -124,7 +134,7 @@ namespace WebApi.Controllers.AccountManage
         [Route(nameof(修改姓名) + "/{name}")]
         public async Task 修改姓名(string name)
         {
-            await domainService_Account.修改姓名_DBAsync(HttpContextHelper<MyJWTPayload>.CurrentLoginUser.Key, name);
+            await domainService_Account.修改姓名_DBAsync(CurrentLoginUser.Key, name);
             await SaveAsync();
         }
 
@@ -161,6 +171,7 @@ namespace WebApi.Controllers.AccountManage
             /// </summary>
             public string PassWordTwo { get; set; }
         }
+
         //把校验规则写到单独的文件，也是DDD的一种原则
         public class 修改密码_DtoValidator : AbstractValidator<修改密码_Dto>
         {

@@ -7,9 +7,9 @@
 // Changes to this file may cause incorrect behavior and will be lost if
 // the code is regenerated.
 //------------------------------------------------------------------------------
-using System;
-using Microsoft.EntityFrameworkCore;
 using IRepository_DB;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Repository_DB
 {
@@ -35,6 +35,7 @@ namespace Repository_DB
                 throw new InvalidOperationException("Context has not been initialized.");
             return new EntityFrameworkUnitOfWork(context);
         }
-        #endregion
+
+        #endregion IUnitOfWorkFactory Members
     }
 }

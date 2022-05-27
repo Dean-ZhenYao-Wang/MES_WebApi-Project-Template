@@ -22,6 +22,7 @@ namespace IRepository_DB
         IRepository<用户_角色> 用户_角色s { get; }
         IRepository<用户> 用户 { get; }
         IRepository<组织> 组织 { get; }
+
         void Save();
     }
 }

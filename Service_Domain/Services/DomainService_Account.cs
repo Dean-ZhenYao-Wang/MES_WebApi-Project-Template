@@ -28,7 +28,7 @@ namespace Service_Domain.Services
         {
             BaseDB.用户 account = new 用户
             {
-                Key = Guid.NewGuid(),
+                Key = Guid.NewGuid().ToString(),
                 登录用户名 = accountNumber,
                 昵称 = name,
                 密码 = passWord
@@ -43,9 +43,9 @@ namespace Service_Domain.Services
         /// </summary>
         /// <param name="acccountId">账号Id</param>
         /// <param name="passWord">新密码</param>
-        public async Task 修改密码_DBAsync(Guid acccountId, string passWord)
+        public async Task 修改密码_DBAsync(string acccountId, string passWord)
         {
-            var account = await 用户.All().FirstAsync(m => m.Key == acccountId);
+            var account = await 用户.All().FirstAsync(m => m.Key.Equals(acccountId));
             account.密码 = passWord;
             account.记录修改人及修改时间();
         }
@@ -55,9 +55,9 @@ namespace Service_Domain.Services
         /// </summary>
         /// <param name="acccountId">账号Id</param>
         /// <param name="name">新姓名</param>
-        public async Task 修改姓名_DBAsync(Guid acccountId, string name)
+        public async Task 修改姓名_DBAsync(string acccountId, string name)
         {
-            var account = await 用户.All().FirstAsync(m => m.Key == acccountId);
+            var account = await 用户.All().FirstAsync(m => m.Key.Equals(acccountId));
             account.昵称 = name;
             account.记录修改人及修改时间();
         }
@@ -71,7 +71,7 @@ namespace Service_Domain.Services
         public async Task<用户> 登录Async(string accountNumber, string passWord)
         {
             return await 用户.All()
-                .Where(m => m.IsDelete == false && m.登录用户名.Equals(accountNumber)&&m.密码.Equals(passWord))
+                .Where(m => m.IsDelete == false && m.登录用户名.Equals(accountNumber) && m.密码.Equals(passWord))
                 .FirstOrDefaultAsync();
         }
     }

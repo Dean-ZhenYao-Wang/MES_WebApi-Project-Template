@@ -7,11 +7,10 @@
 // Changes to this file may cause incorrect behavior and will be lost if
 // the code is regenerated.
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using IRepository_DB;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 
 namespace Repository_DB
 {
@@ -28,13 +27,11 @@ namespace Repository_DB
 
         public virtual IQueryable<T> All()
         {
-
             return objectSet;
         }
 
         public virtual void Add(T entity)
         {
-
             if (entity == null)
             {
                 throw new ArgumentNullException("entity");
@@ -44,7 +41,6 @@ namespace Repository_DB
 
         public virtual void Remove(T entity)
         {
-
             if (entity == null)
             {
                 throw new ArgumentNullException("entity");
@@ -52,7 +48,7 @@ namespace Repository_DB
             objectSet.Remove(entity);
         }
 
-        public DbContext Context 
+        public DbContext Context
         {
             get
             {

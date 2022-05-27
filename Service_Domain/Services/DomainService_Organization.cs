@@ -20,9 +20,9 @@ namespace Service_Domain.Services
             this.用户所属组织 = unitOfWork.用户_组织s;
         }
 
-        public async Task 修改组织_DBAsync(Guid orgId, string 编号, int 序号, string 名称, string 全名, Guid? 上一级组织的Id)
+        public async Task 修改组织_DBAsync(string orgId, string 编号, int 序号, string 名称, string 全名, string 上一级组织的Id)
         {
-            var org = await 组织.All().Where(m => m.Key == orgId).FirstAsync();
+            var org = await 组织.All().Where(m => m.Key.Equals(orgId)).FirstAsync();
             org.名称 = 名称;
             org.全名 = 名称;
             org.序号 = 序号;
@@ -31,22 +31,22 @@ namespace Service_Domain.Services
             org.记录修改人及修改时间();
         }
 
-        public async Task 删除组织_DBAsync(Guid orgId)
+        public async Task 删除组织_DBAsync(string orgId)
         {
-            var org = await 组织.All().Where(m => m.Key == orgId).FirstAsync();
+            var org = await 组织.All().Where(m => m.Key.Equals(orgId)).FirstAsync();
             org.删除();
-            var listPeople = await 用户所属组织.All().Where(m => m.IsDelete == false && m.组织Key == orgId).ToListAsync();
+            var listPeople = await 用户所属组织.All().Where(m => m.IsDelete == false && m.组织Key.Equals(orgId)).ToListAsync();
             listPeople.ForEach(m =>
             {
                 m.删除();
             });
         }
 
-        public async Task 新增组织_DBAsync(string 编号, int 序号, string 名称, string 全名, Guid? 上一级组织的Id)
+        public async Task 新增组织_DBAsync(string 编号, int 序号, string 名称, string 全名, string 上一级组织的Id)
         {
             BaseDB.组织 org = new 组织
             {
-                Key = Guid.NewGuid(),
+                Key = Guid.NewGuid().ToString(),
                 名称 = 名称,
                 全名 = 名称,
                 序号 = 序号,

@@ -1,5 +1,4 @@
-﻿using BaseDB;
-using IRepository_DB;
+﻿using IRepository_DB;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +18,15 @@ namespace WebApi.Controllers
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IMediator mediator;
+        public readonly dynamic CurrentLoginUser;
+
         public BaseController(IUnitOfWork unitOfWork, IMediator mediator)
         {
             this.unitOfWork = unitOfWork;
             this.mediator = mediator;
+            this.CurrentLoginUser = HttpContextHelper.CurrentLoginUser;
         }
+
         /// <summary>
         /// 返回JSON
         /// </summary>
@@ -152,10 +155,12 @@ namespace WebApi.Controllers
         {
             unitOfWork.Save();
         }
+
         protected async Task SaveAsync()
         {
             await unitOfWork.SaveAsync();
         }
+
         protected async Task Publish(INotification eventObj)
         {
             await mediator.Publish(eventObj);

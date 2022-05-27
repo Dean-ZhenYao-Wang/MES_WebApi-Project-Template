@@ -30,16 +30,6 @@ namespace Util
         /// <summary>
         /// 获取Token中的数据
         /// </summary>
-        /// <param name="token">token</param>
-        /// <returns></returns>
-        public static JObject GetPayload(string token)
-        {
-            return token.Split('.')[1].Base64UrlDecode().ToJObject();
-        }
-
-        /// <summary>
-        /// 获取Token中的数据
-        /// </summary>
         /// <typeparam name="TEntity">泛型</typeparam>
         /// <param name="token">token</param>
         /// <returns></returns>

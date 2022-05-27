@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GongDaBox.BaseDbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="BaseDB.MES Repository And Unit of Work.tmpl" />
   </ItemGroup>
 

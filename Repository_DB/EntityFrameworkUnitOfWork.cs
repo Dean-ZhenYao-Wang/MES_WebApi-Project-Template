@@ -7,11 +7,10 @@
 // Changes to this file may cause incorrect behavior and will be lost if
 // the code is regenerated.
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using IRepository_DB;
 using BaseDB;
+using IRepository_DB;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Repository_DB
 {
@@ -19,21 +18,21 @@ namespace Repository_DB
     {
         protected DbContext context = null;
 
-        IRepository<菜单> _菜单;
+        private IRepository<菜单> _菜单;
 
-        IRepository<附件> _附件;
+        private IRepository<附件> _附件;
 
-        IRepository<角色> _角色;
+        private IRepository<角色> _角色;
 
-        IRepository<角色_菜单> _角色_菜单s;
+        private IRepository<角色_菜单> _角色_菜单s;
 
-        IRepository<用户_组织> _用户_组织s;
+        private IRepository<用户_组织> _用户_组织s;
 
-        IRepository<用户_角色> _用户_角色s;
+        private IRepository<用户_角色> _用户_角色s;
 
-        IRepository<用户> _用户;
+        private IRepository<用户> _用户;
 
-        IRepository<组织> _组织;
+        private IRepository<组织> _组织;
 
         public EntityFrameworkUnitOfWork()
             : this(new BaseDB.BaseDbContext())
@@ -84,72 +83,88 @@ namespace Repository_DB
             GC.SuppressFinalize(this);
         }
 
-        #endregion
+        #endregion IDisposable Methods
 
         #region IUnitOfWork Members
 
-        public IRepository<菜单> 菜单 {
-          get {
-            if (_菜单 == null)
-              _菜单 = new EntityFrameworkRepository<菜单>(context);
-            return _菜单;
-          }
+        public IRepository<菜单> 菜单
+        {
+            get
+            {
+                if (_菜单 == null)
+                    _菜单 = new EntityFrameworkRepository<菜单>(context);
+                return _菜单;
+            }
         }
 
-        public IRepository<附件> 附件 {
-          get {
-            if (_附件 == null)
-              _附件 = new EntityFrameworkRepository<附件>(context);
-            return _附件;
-          }
+        public IRepository<附件> 附件
+        {
+            get
+            {
+                if (_附件 == null)
+                    _附件 = new EntityFrameworkRepository<附件>(context);
+                return _附件;
+            }
         }
 
-        public IRepository<角色> 角色 {
-          get {
-            if (_角色 == null)
-              _角色 = new EntityFrameworkRepository<角色>(context);
-            return _角色;
-          }
+        public IRepository<角色> 角色
+        {
+            get
+            {
+                if (_角色 == null)
+                    _角色 = new EntityFrameworkRepository<角色>(context);
+                return _角色;
+            }
         }
 
-        public IRepository<角色_菜单> 角色_菜单s {
-          get {
-            if (_角色_菜单s == null)
-              _角色_菜单s = new EntityFrameworkRepository<角色_菜单>(context);
-            return _角色_菜单s;
-          }
+        public IRepository<角色_菜单> 角色_菜单s
+        {
+            get
+            {
+                if (_角色_菜单s == null)
+                    _角色_菜单s = new EntityFrameworkRepository<角色_菜单>(context);
+                return _角色_菜单s;
+            }
         }
 
-        public IRepository<用户_组织> 用户_组织s {
-          get {
-            if (_用户_组织s == null)
-              _用户_组织s = new EntityFrameworkRepository<用户_组织>(context);
-            return _用户_组织s;
-          }
+        public IRepository<用户_组织> 用户_组织s
+        {
+            get
+            {
+                if (_用户_组织s == null)
+                    _用户_组织s = new EntityFrameworkRepository<用户_组织>(context);
+                return _用户_组织s;
+            }
         }
 
-        public IRepository<用户_角色> 用户_角色s {
-          get {
-            if (_用户_角色s == null)
-              _用户_角色s = new EntityFrameworkRepository<用户_角色>(context);
-            return _用户_角色s;
-          }
+        public IRepository<用户_角色> 用户_角色s
+        {
+            get
+            {
+                if (_用户_角色s == null)
+                    _用户_角色s = new EntityFrameworkRepository<用户_角色>(context);
+                return _用户_角色s;
+            }
         }
 
-        public IRepository<用户> 用户 {
-          get {
-            if (_用户 == null)
-              _用户 = new EntityFrameworkRepository<用户>(context);
-            return _用户;
-          }
+        public IRepository<用户> 用户
+        {
+            get
+            {
+                if (_用户 == null)
+                    _用户 = new EntityFrameworkRepository<用户>(context);
+                return _用户;
+            }
         }
 
-        public IRepository<组织> 组织 {
-          get {
-            if (_组织 == null)
-              _组织 = new EntityFrameworkRepository<组织>(context);
-            return _组织;
-          }
+        public IRepository<组织> 组织
+        {
+            get
+            {
+                if (_组织 == null)
+                    _组织 = new EntityFrameworkRepository<组织>(context);
+                return _组织;
+            }
         }
 
         public virtual void Save()
@@ -159,6 +174,6 @@ namespace Repository_DB
             context.SaveChanges();
         }
 
-        #endregion
+        #endregion IUnitOfWork Members
     }
 }
