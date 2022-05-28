@@ -36,6 +36,8 @@
     <Folder Include="EntitiesConfiguration\" />
     <Folder Include="Entities\" />
     <Folder Include="Enum\" />
+    <Folder Include="Entities\" />
+    <Folder Include="EntitiesConfiguration\" />
   </ItemGroup>
 
 </Project>
