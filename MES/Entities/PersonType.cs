@@ -13,11 +13,6 @@ public partial class PersonType
     public virtual IList<用户_组织> 所属的组织列表 { get; set; }
 
     /// <summary>
-    /// There are no comments for Key in the schema.
-    /// </summary>
-    public new string Key { get; set; }
-
-    /// <summary>
     /// 登录用户名
     /// </summary>
     public virtual string 登录用户名 { get; set; }
