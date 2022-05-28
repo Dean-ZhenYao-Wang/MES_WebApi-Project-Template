@@ -1,0 +1,1733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HierarchyScopeType">
+    <Position X="35.75" Y="32.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIIAAACAAIAAQAAAAEAAAAAAAAIAAgAAAAAAA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScopeChild" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProductInformationType">
+    <Position X="58.75" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductSegments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProductSegmentType">
+    <Position X="54.25" Y="16.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAggAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseSegment" />
+      <Property Name="ProductInformation" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProcessSgements" />
+      <Property Name="SegmentChilds" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TestSpecificationType">
+    <Position X="27" Y="14.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IARGADEAAgkhBBIBIEQAAghwSCCAAAAAAABAAAAABhA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EvaluatedProperty" />
+      <Property Name="TestSpecificationChild" />
+      <Property Name="TestSpecificationCriteria" />
+      <Property Name="TestSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TestSpecificationPropertyType">
+    <Position X="18.5" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAACABAAAAAgAAAAIAAAAAAAAAAAACAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TestSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TestSpecificationCriteriaType">
+    <Position X="18.5" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAJAAAAAQAABAAAIAQAQCAAAEAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestSpecificationEvaluatedPropertyType">
+    <Position X="26.25" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgQAgAIAAIAAAAEAAAABAAAAAAAABAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestResultType">
+    <Position X="22.75" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIEGAAABAAkgIAAJIGAAAABAAAAAAAAAAAAAAACChgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TestResultChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PersonnelClassType">
+    <Position X="32.25" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>YgQGAGAAAEggAAIAIgQCAAAAAEAgAAAAAgAAAAAABgA=</HashCode>
+      <FileName>Entities\PersonnelClassType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelClassProperty" />
+      <Property Name="可访问的菜单列表" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PersonnelClassPropertyType">
+    <Position X="27.5" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAAAAAEAAACIABAAiAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelClassPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PersonType">
+    <Position X="55.25" Y="37.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQGAiAEgAggAMAIIiSoBQAAYCAgAEAAAgSIAIACBgQ=</HashCode>
+      <FileName>Entities\PersonType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonProperty" />
+      <Property Name="所属的组织列表" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PersonPropertyType">
+    <Position X="63.75" Y="51" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAgAAAAIAAAAEAAAAAAACAAIAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EquipmentClassType">
+    <Position X="32.25" Y="30.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>JAQGFCAAEAggAAAAIgQABAAAAAAgAAAQAgAUAAQABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentClassChild" />
+      <Property Name="EquipmentClassProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EquipmentClassPropertyType">
+    <Position X="9.5" Y="11.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAgAAAAIAAAQAAAAAAAACIAAAAiAAAAAgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentClassPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EquipmentType">
+    <Position X="39.25" Y="29.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAQGgCAAEAggAACAIhQAgAIAQABgAECAQgAQAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentChild" />
+      <Property Name="EquipmentProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EquipmentPropertyType">
+    <Position X="35.75" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAIAAAgAAAAIAIAAAAAAAAAACAAAAggAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PhysicalAssetClassType">
+    <Position X="47.25" Y="41.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAwGACDIIAggAAAAIgQEAAAAAgAgAAIAAgAgAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetClassChild" />
+      <Property Name="PhysicalAssetClassProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PhysicalAssetClassPropertyType">
+    <Position X="62.5" Y="55.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAAAAAAAACCIAAAAiAAAAIgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetClassPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PhysicalAssetType">
+    <Position X="47.25" Y="33.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ICQOgCAAEAggAAAAIiUggAAAIBAgAAAZAgAQCAAADgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+      <Property Name="EquipmentLevel" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetChild" />
+      <Property Name="PhysicalAssetProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PhysicalAssetPropertyType">
+    <Position X="43.5" Y="53" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIgBAgAAAAAAAACAAAAAgAAAEAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialClassType">
+    <Position X="35.25" Y="36" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IgQHAKAAAwihAAIAIwQAAAAAAAAgQAAAAkAAAAIABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyClass" />
+      <Property Name="MaterialClassProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialClassPropertyType">
+    <Position X="36.75" Y="52.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAgAAAAIAAAAAAAAAAAACIAAAAjAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialClassPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialDefinitionType">
+    <Position X="35.25" Y="24.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAQGAiAAAgggAAKAIgQAQAAAAAAgQAAAAkAIQAAADoI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyDefinition" />
+      <Property Name="MaterialDefinitionProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialDefinitionPropertyType">
+    <Position X="18.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAACACAAAEIgAABAoAAAAAAAAAAAACIAAAAiAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialDefinitionPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialLotType">
+    <Position X="25" Y="28.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAEEiggABIAIgQAAAAAEAggQBGIAkABoAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyLot" />
+      <Property Name="AssemblySubLot" />
+      <Property Name="MaterialLotProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialLotPropertyType">
+    <Position X="15.25" Y="25.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAJAABQAAAAAAAACEAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialLotPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialSubLotType">
+    <Position X="29.25" Y="29" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQOACAEGgggABoAIgQAAAAAEAggQBGIAkABgAAADgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyLot" />
+      <Property Name="AssemblySubLot" />
+      <Property Name="MaterialLotProperty" />
+      <Property Name="MaterialSubLotChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationalLocationClassType">
+    <Position X="31" Y="23.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>MAQGUCAAAEggAAAAIgQAAAAAAQAAAAGAAgAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+      <Property Name="OperationalLocationClassChild" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationalLocationClassProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationalLocationClassPropertyType">
+    <Position X="14.25" Y="7" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAAgAAAAIAAAAAAAAAAAACYAAAAiAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationalLocationClassPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationalLocationType">
+    <Position X="39" Y="23.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IARGACAAAAggAAAAIgQABCAAAAQgAAAAAgQAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationalLocationChild" />
+      <Property Name="OperationalLocationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationalLocationPropertyType">
+    <Position X="22.5" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAACIAABAgAAAAAAACEAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationalLocationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProcessSegmentType">
+    <Position X="50.5" Y="13.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>KAQGADAAYAggABAAcgQCBBAAAyUAjAEBGoEBAQgABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSegmentSpecification" />
+      <Property Name="MaterialSegmentSpecification" />
+      <Property Name="PersonnelSegmentSpecification" />
+      <Property Name="PhysicalAssetSegmentSpecification" />
+      <Property Name="ProcessSegmentChild" />
+      <Property Name="ProductSegments" />
+      <Property Name="SegmentDependency" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PersonnelSegmentSpecificationType">
+    <Position X="50.75" Y="43.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>YAAGCCAAAABoAAAoIAAACAAAQABgAECAAAAAgEAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelSegmentSpecificationChild" />
+      <Property Name="PersonnelSegmentSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PersonnelSegmentSpecificationPropertyType">
+    <Position X="58.5" Y="50.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAIIAAAACAAAAAAACCAKAAgoAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnalSegmentSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EquipmentSegmentSpecificationType">
+    <Position X="45.75" Y="15.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAGgCAEIAAgAAAAIAAAAAIAwAAgAECCAAYggIAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSegmentSpecificationChild" />
+      <Property Name="EquipmentSegmentSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EquipmentSegmentSpecificationPropertyType">
+    <Position X="52.5" Y="3.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAACAAgAAAAIAIAAAAAAQAAACGAAAAogAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSegmentSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PhysicalAssetSegmentSpecificationType">
+    <Position X="22.75" Y="15.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAGCCABAAggAAAAICAAAAAAABBgAACRQAAAgAAILgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetSegmentSpecificationChild" />
+      <Property Name="PhysicalAssetSegmentSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PhysicalAssetSegmentSpecificationPropertyType">
+    <Position X="13.5" Y="11.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAgAAAAIABAAAAAAAAACCCAAAoggAAEAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetSegmentSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialSegmentSpecificationType">
+    <Position X="24.75" Y="45.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQOBCAAAiRgAAIAIAAAAABAAABgwACAAMAIoAAEDgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblySegmentSpecification" />
+      <Property Name="MaterialSegmentSpecificationChild" />
+      <Property Name="MaterialSegmentSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MaterialSegmentSpecificationPropertyType">
+    <Position X="32.75" Y="48.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAEAgCABAJAAAQACAAAAAgCCAAAAggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialSegmentSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsEventClassType">
+    <Position X="27" Y="22.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>JAYGUCAAAAigAIAAogQAAAAAAAAAAQAAEgEAAAAgDgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsEventClassChild" />
+      <Property Name="OperationsEventClassProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsEventClassPropertyType">
+    <Position X="10" Y="15.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAAAiAAAAIAAAAAAAAAAAACIAAAAiAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsEventClassPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsEventDefinitionType">
+    <Position X="28.75" Y="38" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IAQGAKAAggygDIIEMgwAADAIAEAwAAAACgBIAAgADlA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsEventDefinitionChild" />
+      <Property Name="OperationsEventDefinitionProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsEventType">
+    <Position X="42.25" Y="21.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>KgAGAKICggSgCIIEMBgAgDAQAAAiQAAAAEAIQAgADkA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsEventChild" />
+      <Property Name="OperationsEventProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsEventPropertyType">
+    <Position X="49.5" Y="11.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>简单类型与复杂类型.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OperationsCapabilityType">
+    <Position X="39" Y="37.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAEGACAQAgAgAAIAMgAoADAAKAAggIAAIoCAAIABFgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapability" />
+      <Property Name="MaterialCapability" />
+      <Property Name="OperationsSegmentCapability" />
+      <Property Name="PersonnelCapability" />
+      <Property Name="PhysicalAssetCapability" />
+      <Property Name="ProcessSegmentCapability" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpProcessSegmentCapabilityType">
+    <Position X="36.75" Y="45.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAEGACAAAgAhAAIAcgAgBDAAIAAhAIAAIgCAAIABBgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapability" />
+      <Property Name="HierarchyScope" />
+      <Property Name="MaterialCapability" />
+      <Property Name="PersonnelCapability" />
+      <Property Name="PhysicalAssetCapability" />
+      <Property Name="ProcessSegmentCapabilityChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpOperationsSegmentCapabilityType">
+    <Position X="40.5" Y="45.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>MAEGACAAAgAkAAIAMgAgADAAIEAwAIAAIgCAAIABBgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapability" />
+      <Property Name="HierarchyScope" />
+      <Property Name="MaterialCapability" />
+      <Property Name="OperationsSegmentCapabilityChild" />
+      <Property Name="PersonnelCapability" />
+      <Property Name="PhysicalAssetCapability" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelCapabilityType">
+    <Position X="39.75" Y="56.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>YAEGACAQAgBgAAIIIAAgAGAAYABgAECAAgAAhEABFgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelCapabilityChild" />
+      <Property Name="PersonnelCapabilityProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelCapabilityPropertyType">
+    <Position X="39" Y="64.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAIIAAAACAAAAAAACCAIAAgiAAAAgg=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelCapabilityPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentCapabilityType">
+    <Position X="35.75" Y="56.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAEGgCAUYgAgAAIAIAAgACIAYCAgAECAAAQggAABFgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapabilityChild" />
+      <Property Name="EquipmentCapabilityProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentCapabilityPropertyType">
+    <Position X="32" Y="60.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAIAgAACAIAIAAAAAAQAAACGAAAAggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapabilityPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetCapabilityType">
+    <Position X="59.75" Y="37.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEGACARAgAgAAIAICAgACAAIBBgAACRQAAAgAAJPgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetCapabilityChild" />
+      <Property Name="PhysicalAssetCapabilityProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetCapabilityPropertyType">
+    <Position X="59" Y="45.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIQBAAAEAAAAACCCAAAgggAAEAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetCapabilityPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialCapabilityType">
+    <Position X="47.75" Y="55.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIEOBCAQAiQgQAIAIIAgACBAJAAgQACAAEAIoAABHgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyCapability" />
+      <Property Name="MaterialCapabilityProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialCapabilityPropertyType">
+    <Position X="51" Y="63" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAgAABAJAAAQACAQAAAgGCAAAAggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MateralCapabilityPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsDefinitionType">
+    <Position X="43" Y="29.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAIYAggAAAAMgQAABEAAAAJgAEgAoABAAAMJgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsSegment" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsMaterialBillType">
+    <Position X="58.75" Y="54.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAAAAgggAAAIoQAAAAQAAAIEAAgAgAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsMaterialBillItem" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SegmentDependencyType">
+    <Position X="57.25" Y="16.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAwgAAQAIABAAAgACCAAAAAAAAAAAQAAAgE=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProcessSegment" />
+      <Property Name="ProcessSegment_A" />
+      <Property Name="ProcessSegment_B" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OperationsSegmentType">
+    <Position X="50.75" Y="33.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAQGCSIAQAgjAAIAMgQAADABEQAtwANgItABAAAMJgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSpecification" />
+      <Property Name="MaterialSpecification" />
+      <Property Name="OperationsSegmentChild" />
+      <Property Name="PersonnelSpecification" />
+      <Property Name="PhysicalAssetSpecification" />
+      <Property Name="SegmentDependency" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsMaterialBillItemType">
+    <Position X="43" Y="37" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAAAgggAAIAIgQABAAQAABAWACAAkAAgAAAJgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyBillOfMaterialItem" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelSpecificationType">
+    <Position X="51" Y="56.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>YACGACAAAABgAAEIIACAAAAAQABgAECAAAAAgEAABwA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelSpecificationChild" />
+      <Property Name="PersonnelSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelSpecificationPropertyType">
+    <Position X="54.25" Y="57.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAIIAAAACAAAEAAACDAIAAggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentSpecificationType">
+    <Position X="63" Y="44.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ADAGgCAEIAAgAAgAIAAAAAIAUAAgAECAAAQggAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSpecificationChild" />
+      <Property Name="EquipmentSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentSpecificationPropertyType">
+    <Position X="66.25" Y="45.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAAgAAAAIAIAQAAAAQAEACGAAAAggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetSpecificationType">
+    <Position X="43.75" Y="56.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAGACAAAAAgAEAAICBAAAAAABBgAACQUAAAgBAILgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetSpecificationChild" />
+      <Property Name="PhysicalAssetSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetSpecificationPropertyType">
+    <Position X="47" Y="64.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIABAEAAAABAACCCAAAgggAAEAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialSpecificationType">
+    <Position X="63" Y="37" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIOBCABAiQgAAIAIAAAAABAAAAgQACAAEEIoAACDgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblySpecification" />
+      <Property Name="MaterialSpecificationProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialSpecificationPropertyType">
+    <Position X="66.25" Y="37.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAgAABAJAAAQACAgAAAgCCAAAIggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsScheduleType">
+    <Position X="45.25" Y="23.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAGACAAAAAgAQAAMgEgADAAMAAgABAAAgAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsRequest" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsRequestType">
+    <Position X="49.5" Y="26.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>MAAGACIAAAQiAAAEMABgADAAYAAwAEAAAAgAQAAMBkA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RequestedSegmentResponse" />
+      <Property Name="SegmentRequirement" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpSegmentRequirementType">
+    <Position X="55.5" Y="21.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>MgAGACIAAAMjAECBMgAACBAEAIkRAEAAAggAQIAMBkk=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentRequirement" />
+      <Property Name="MaterialRequirement" />
+      <Property Name="PersonnelRequirement" />
+      <Property Name="PhysicalAssetRequirement" />
+      <Property Name="RequestedSegmentResponse" />
+      <Property Name="SegmentRequirementChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelRequirementType">
+    <Position X="44.75" Y="8.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>YAAGACAAAABgABAIIAAAAAAAQABgBFCAAAgAgEAIRgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelRequirementChild" />
+      <Property Name="PersonnelRequirementProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelRequirementPropertyType">
+    <Position X="44.75" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAYIAAAACAAAAAAACCAIAgggAAIAhA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelRequirementPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentRequirementType">
+    <Position X="54.75" Y="8" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>QAAGgCAEMAAgAAAAIAEAAAIAQAQgAECAAA0wgAAIBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentRequirementChild" />
+      <Property Name="EquipmentRequirementProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentRequirementPropertyType">
+    <Position X="58.75" Y="8" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAEgAAAAIAIAAAAAAQAAACGAAAgggQAIAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentRequirementPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetRequirementType">
+    <Position X="60.5" Y="27.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AIAGACAAEAAgAAAAICAAAAAAABBgAACQQAgTgAAILwA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EquipmentLevel" />
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetRequirementChild" />
+      <Property Name="PhysicalAssetRequirementProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetRequirementPropertyType">
+    <Position X="64.5" Y="28.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIABAAABAAAAASCCAAAgggAAMAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetRequirementPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialRequirementType">
+    <Position X="63.75" Y="19.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ABAOBCAQAiQgAAIAIAAAAABAEAAgQBCAAEgIoAAIDgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyRequirement" />
+      <Property Name="MaterialRequirementProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialRequirementPropertyType">
+    <Position X="59.75" Y="21.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAAEAgAABAJAAAQACAAAAAgCCAAggggAAIAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialRequirementPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsPerformanceType">
+    <Position X="20" Y="34.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IIAGACCAAEAgAABAMgAiADAAIAAggAAAAgAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OperationsResponse" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OperationsResponseType">
+    <Position X="25.25" Y="38" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>MAAGACAAAAAgABAAMAQwADAEIAAwAACAAAAAUAIABlA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SegmentResponse" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpSegmentResponseType">
+    <Position X="38.75" Y="11" Width="3.25" />
+    <Members>
+      <Field Name="segmentData" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>GQAGCAAACAkhCRgRMgEQARAAAAARCACAEggAYRIIBlA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="segmentData" />
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentActual" />
+      <Property Name="MaterialActual" />
+      <Property Name="PersonnelActual" />
+      <Property Name="PhysicalAssetActual" />
+      <Property Name="SegmentResponseChild" />
+      <Property Name="SegmentData" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpSegmentDataType">
+    <Position X="48.75" Y="22.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAgAAAQIAAAABAAAAAAACAAAAggAAAIBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SegmentDataChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelActualType">
+    <Position X="30.75" Y="17.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>YAAGACAAAARgAAAIIAAAAIAAQABAAECIAAgAjkAIBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelActualChild" />
+      <Property Name="PersonnelActualProperty" />
+      <Property Name="TestResult" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPersonnelActualPropertyType">
+    <Position X="38.75" Y="6" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAIIAAAACAAAAAAACKAIAgggACIAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PersonnelActualPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentActualType">
+    <Position X="34.75" Y="18.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAmgCAEIAAgBAAAIAAgAAIAQAAAAECIAAwgiAAMBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentActualChild" />
+      <Property Name="EquipmentActualProperty" />
+      <Property Name="TestResult" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpEquipmentActualPropertyType">
+    <Position X="27.75" Y="9" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAIAAAgAAAAIAIAAAAAAQAAACGAAAgggAAIAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentActualPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetActualType">
+    <Position X="22.75" Y="22.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ABAWACAAAAAgAAAAICAAAAAAAhBAAAKYQAgAiAAILgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetActualChild" />
+      <Property Name="PhysicalAssetActualProperty" />
+      <Property Name="TestResult" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpPhysicalAssetActualPropertyType">
+    <Position X="12.75" Y="20" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAgAAAAIABAAAAAAAAICCCAAAgggAAMAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PhysicalAssetActualPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialActualType">
+    <Position X="20.75" Y="40.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAOBCAAAiQgAAIAIAACACBAAgAAQACIAEgIqAAIDgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AssemblyActual" />
+      <Property Name="MaterialActualProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpMaterialActualPropertyType">
+    <Position X="12.75" Y="41.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAgAABAJAAAQACAAAAAgCCAgAgggIAIAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MaterialActualPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ResourceRelationshipNetworkType">
+    <Position X="21" Y="28.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IQQGACAABAggAAAAIgQABAAABAABAAIAAgAABAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ResourceNetworkConnection" />
+      <Property Name="RRNProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="RRNPropertyType">
+    <Position X="14.5" Y="29.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAAAAAAAAACAAAgAggAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="RRNPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ResourceNetworkConnectionType">
+    <Position X="9" Y="21.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAwAAAAMAAAAEAAAABAAAACEAAAAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FromResourceReference" />
+      <Property Name="ToResourceReference" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RNCProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="RNCPropertyType">
+    <Position X="6" Y="25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgACAAIAAAAAAAAAAQACAQAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="RNCPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ResourceNetworkConnectionTypeType">
+    <Position X="32.75" Y="42.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IAQGAKAAAAigAAACIgQAAAAIAAAACAAAggAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RNCTypeProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="RNCTypePropertyType">
+    <Position X="18.25" Y="57" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABgAAAEIAAAAAAAAAAAACAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourceReferenceType">
+    <Position X="5.75" Y="21" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABEAgABQAIAAQAAAAAAAAAAAAAAAAAABAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ResourceReferenceProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ResourceReferencePropertyType">
+    <Position X="1.5" Y="20.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAIAAIAAAAAAAAAAAACAQAAIgEAAIAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ResourceReferencePropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkAlertDefinitionType">
+    <Position X="32.25" Y="64.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAQGgCAAAAwgAAAEIgQAgAAAAAAAAAAAAgAIAAAADgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkAlertDefinitionProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkAlertDefinitionPropertyType">
+    <Position X="35.5" Y="65.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEgAAAAIAEAAAAAAAAAACAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkAlertDefinitionPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkAlertType">
+    <Position X="44.5" Y="46.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIQGACCAAAwgAAAEIgQAACAAAAAAAAAAAggICAAIDgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkAlertProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkAlertPropertyType">
+    <Position X="40" Y="52.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAgAAAAIAQAAAAAAAAABCAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkAlertPropertyChid" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarDefinitionEntryType">
+    <Position X="31.5" Y="54.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IAQWACAAAAggAAAAIgQAAAABAAACATAAAgAhAAAAB4A=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarDefinitionEntryProperty" />
+      <Property Name="WorkCalendarDefinitionEntryChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarDefinitionEntryPropertyType">
+    <Position X="27.5" Y="61.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAgAAAAIAAAAAAAAAAgACAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarDefinitionEntryPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarDefinitionType">
+    <Position X="29" Y="47" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAAAAgkAABAIgQAAAAEAAAAAAAAAgAAAAAEBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarDefinitionEntry" />
+      <Property Name="WorkCalendarDefinitionProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarDefinitionPropertyType">
+    <Position X="21.75" Y="56.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAIAAAAAAACAAAAAgAIAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarDefinitionPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarType">
+    <Position X="35.25" Y="13" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAAAAggABAAIgQAAAABAAAAAAAAAgAAAQAAFgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarEntry" />
+      <Property Name="WorkCalendarProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarPropertyType">
+    <Position X="24" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACCAAAAAAgAAAAIAAAAQAAAAAAASAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarEntryType">
+    <Position X="34.75" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAmABAAAgAgEAAAIgAAABAAAAAAACAAAgKiAAAQBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarEntryChild" />
+      <Property Name="WorkCalendarEntryProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCalendarEntryPropertyType">
+    <Position X="38" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAACAAQAgAAgAAAAIAAAAAAAAAAAACAAAACgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkCalendarEntryPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkCapabilityType">
+    <Position X="54.25" Y="30" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAEGACAQggAgAIIAMgAgADAAIAAgAIAAIgCAAIABFgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapability" />
+      <Property Name="MaterialCapability" />
+      <Property Name="PersonnelCapability" />
+      <Property Name="PhysicalAssetCapability" />
+      <Property Name="WorkMasterCapability" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkMasterCapabilityType">
+    <Position X="44" Y="63.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>YAEGAGAAggAgAIIAIgAgACAAIAAgAIAAIgCAAIABBgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentCapability" />
+      <Property Name="HierarchyScope" />
+      <Property Name="MaterialCapability" />
+      <Property Name="PersonnelCapability" />
+      <Property Name="PhysicalAssetCapability" />
+      <Property Name="WorkMasterCapability" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkMasterType">
+    <Position X="55" Y="47.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>MCQGCSoAAAgrAAAAIoQBAAABkQAVQANAIlABQAAghkA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WorkflowSpecification" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSpecification" />
+      <Property Name="MaterialSpecification" />
+      <Property Name="PersonnelSpecification" />
+      <Property Name="PhysicalAssetSpecification" />
+      <Property Name="WorkMasterChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkDirectiveType">
+    <Position X="47.25" Y="47.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>YDQGCWIQAAgiAAAAIoQBAAABEQAEQAJAIlAAAAAwFgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+      <Property Name="WorkflowSpecification" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentSpecification" />
+      <Property Name="MaterialSpecification" />
+      <Property Name="PersonnelSpecification" />
+      <Property Name="PhysicalAssetSpecification" />
+      <Property Name="WorkDirectiveChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationType">
+    <Position X="10.5" Y="33.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAQGCCAAoAggBAAAIgQACAAAIAAABAEAAgCBAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationProperty" />
+      <Property Name="WorkflowSpecificationNode" />
+      <Property Name="WorkflowSpecificationConnection" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkRecordType">
+    <Position X="17.25" Y="40.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IIBOHCKAeDgwCAjAIAgAAAABAAEQAADAAgAwIAAADgQ=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkRecordChild" />
+      <Property Name="WorkRecordEntry" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkRecordEntryType">
+    <Position X="26" Y="55.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQGgCIECAggAACAIAAAgAAAAAIAAACAAgAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkRecordEntryChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkScheduleType">
+    <Position X="17.5" Y="33.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAGACAAAAAgAAAAIgEhACADMQAgAhAAAgAAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkRequest" />
+      <Property Name="WorkScheduleChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkRequestType">
+    <Position X="31.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>oAAGAiIAAAQiABAEIACxACAAIQAgAACAAACAAAIABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="JobOrder" />
+      <Property Name="WorkRequestChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkResponseType">
+    <Position X="20.75" Y="50.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>JAAGACACAAAgAAAAMgAhACAAIQAkAAAQAgoAEAAIBhA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="JobResponse" />
+      <Property Name="WorkResponseChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="JobOrderType">
+    <Position X="49.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>YICGAGCAACZgAgAEIgAhDCAAIYwgAACAAgAAAIoABgg=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EquipmentRequirement" />
+      <Property Name="MaterialRequirement" />
+      <Property Name="PersonnelRequirement" />
+      <Property Name="PhysicalAssetRequirement" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="JobResponseType">
+    <Position X="12.75" Y="48.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>aQAGAGAAAGAgAQgQMhExADAQIUAhAAoEAggAIEgYBhA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JobListType">
+    <Position X="32.5" Y="36.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAGACAAAAAgAAAAIgChACAAIQAgAAAAAgCAAAAABgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="JobOrder" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkPerformanceType">
+    <Position X="17.25" Y="50.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAGACAABAAggAQAIoAhACAAIQAgAAAAggAgAIAAJgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkPerformanceChild" />
+      <Property Name="WorkResponse" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationPropertyType">
+    <Position X="10" Y="29.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAgAAAAIAAAAAAAAAAAQCAAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationNodeTypeType">
+    <Position X="18.75" Y="22.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAQGACAAAAggAAAAIgQAAAAAAACAAAAAAgAAAAAABgI=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationNodeTypeProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationNodeTypePropertyType">
+    <Position X="5.5" Y="28.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAACAAAAAAACAAAAAgCAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationNodeTypePropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationNodeType">
+    <Position X="17" Y="29.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QKAGAEEAAAAgAAAAJAAAAAAAAAAAAAAABQAAAACgBgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+      <Property Name="WorkflowSpecification" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecifictionNodeProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationNodePropertyType">
+    <Position X="11.25" Y="25.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACkAAAAAAgAAAAIAAAEAAAAAAAACCAAAAgAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationNodePropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationConnectionType">
+    <Position X="5.75" Y="33.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAACAgAAAAoAAAAMgAACBAABAAAAAAIQAAAgE=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationConnectionProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationConnectionPropertyType">
+    <Position X="0.5" Y="34.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAAAAwAAAAIAAAAAAAAAAQACAAAAAgAAAAAoA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationConnectionPropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationConnectionTypeType">
+    <Position X="17.5" Y="16" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>IAbGACAAAAggAAAAIgbAQAgAACAAAAAAAgAAQQAABgE=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HierarchyScope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationConnectionTypeProperty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WorkflowSpecificationConnectionTypePropertyType">
+    <Position X="9.25" Y="7.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAIAAAAAAAAAAAACAAACAoAAAAAgA=</HashCode>
+      <FileName>B2MML-AllExtensions_AllSchemas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="WorkflowSpecificationConnectionTypePropertyChild" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="菜单" BaseTypeListCollapsed="true">
+    <Position X="50.75" Y="49.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAABAAAAQAgAAAEAAAACAQAIAAiIAAAAAACRA=</HashCode>
+      <FileName>Entities\菜单.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="上级菜单" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="下级菜单列表" />
+      <Property Name="可访问的角色列表" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="角色_菜单" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAAAAQAgAAAAQAAACAAAMAAAAAAAAAAABA=</HashCode>
+      <FileName>Entities\角色_菜单.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="菜单" />
+      <Property Name="角色" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="用户_组织" BaseTypeListCollapsed="true">
+    <Position X="57" Y="33.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAACAAQAgAAAAAAAACAAAKAAAAAAAgAAABA=</HashCode>
+      <FileName>Entities\用户_组织.Generated.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="用户" />
+      <Property Name="组织" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="组织" BaseTypeListCollapsed="true">
+    <Position X="46.5" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAAQAgAAAEAAAACAAAIBAAMAAQAAACBA=</HashCode>
+      <FileName>Entities\组织.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="上级组织" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="下级组织列表" />
+      <Property Name="下辖的用户列表" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
