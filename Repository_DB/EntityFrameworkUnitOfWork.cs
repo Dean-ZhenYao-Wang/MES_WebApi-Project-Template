@@ -20,17 +20,9 @@ namespace Repository_DB
 
         private IRepository<菜单> _菜单;
 
-        private IRepository<附件> _附件;
-
-        private IRepository<角色> _角色;
-
         private IRepository<角色_菜单> _角色_菜单s;
 
         private IRepository<用户_组织> _用户_组织s;
-
-        private IRepository<用户_角色> _用户_角色s;
-
-        private IRepository<用户> _用户;
 
         private IRepository<组织> _组织;
 
@@ -94,32 +86,6 @@ namespace Repository_DB
             }
         }
 
-        public IRepository<附件> 附件
-        {
-            get
-            {
-                if (_附件 == null)
-                {
-                    _附件 = new EntityFrameworkRepository<附件>(context);
-                }
-
-                return _附件;
-            }
-        }
-
-        public IRepository<角色> 角色
-        {
-            get
-            {
-                if (_角色 == null)
-                {
-                    _角色 = new EntityFrameworkRepository<角色>(context);
-                }
-
-                return _角色;
-            }
-        }
-
         public IRepository<角色_菜单> 角色_菜单s
         {
             get
@@ -143,32 +109,6 @@ namespace Repository_DB
                 }
 
                 return _用户_组织s;
-            }
-        }
-
-        public IRepository<用户_角色> 用户_角色s
-        {
-            get
-            {
-                if (_用户_角色s == null)
-                {
-                    _用户_角色s = new EntityFrameworkRepository<用户_角色>(context);
-                }
-
-                return _用户_角色s;
-            }
-        }
-
-        public IRepository<用户> 用户
-        {
-            get
-            {
-                if (_用户 == null)
-                {
-                    _用户 = new EntityFrameworkRepository<用户>(context);
-                }
-
-                return _用户;
             }
         }
 

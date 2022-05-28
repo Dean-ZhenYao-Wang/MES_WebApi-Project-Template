@@ -13,21 +13,21 @@ namespace Service_Domain.Services
 {
     public class DomainService_Role : IDomainService_Role
     {
-        private readonly IRepository<角色> 角色;
+        private readonly IRepository<PersonnelClassType> 角色;
         private readonly IRepository<角色_菜单> 角色的可访问菜单;
 
         public DomainService_Role(IUnitOfWork unitOfWork)
         {
-            角色 = unitOfWork.角色;
+            角色 = unitOfWork.PersonnelClasses;
             角色的可访问菜单 = unitOfWork.角色_菜单s;
         }
 
-        public async Task<角色> 新增角色_DBAsync(string name)
+        public async Task<PersonnelClassType> 新增角色_DBAsync(string name)
         {
-            BaseDB.角色 role = new BaseDB.角色()
+            PersonnelClassType role = new PersonnelClassType()
             {
                 Key = Guid.NewGuid().ToString(),
-                名称 = name
+                Id = new IdentifierType { Value = name }
             };
             role.记录创建人及创建时间();
             await 角色.AddAsync(role);
@@ -38,7 +38,7 @@ namespace Service_Domain.Services
         {
             var role = await 角色.All().Where(m => m.Key.Equals(roleId)).FirstAsync();
 
-            role.名称 = name;
+            role.Id.Value = name;
             role.记录修改人及修改时间();
         }
 
@@ -48,7 +48,7 @@ namespace Service_Domain.Services
             role.删除();
         }
 
-        public async Task<PagedList<角色>> 查询角色列表_DBAsync(int pageIndex, int pageSize, bool? isDelete = null)
+        public async Task<PagedList<PersonnelClassType>> 查询角色列表_DBAsync(int pageIndex, int pageSize, bool? isDelete = null)
         {
             return await 角色.All()
                 .Where(role => isDelete == null || role.IsDelete == isDelete)
@@ -56,7 +56,7 @@ namespace Service_Domain.Services
                 .ToPagedListAsync(pageIndex, pageSize);
         }
 
-        public async Task<角色> 获取指定角色信息_DBAsync(string roleId)
+        public async Task<PersonnelClassType> 获取指定角色信息_DBAsync(string roleId)
         {
             return await 角色.All()
                  .Where(role => role.Key.Equals(roleId))
@@ -90,10 +90,10 @@ namespace Service_Domain.Services
             var addMenuId_List = list_MenuId.Where(m => !oldMenuId_List.Contains(m)).ToList();
             if (addMenuId_List.Any())
             {
-                List<BaseDB.角色_菜单> addMenulist = new List<BaseDB.角色_菜单>();
+                List<角色_菜单> addMenulist = new List<角色_菜单>();
                 addMenuId_List.ForEach(menuId =>
                 {
-                    var menu = new BaseDB.角色_菜单()
+                    var menu = new 角色_菜单()
                     {
                         Key = Guid.NewGuid().ToString(),
                         角色Key = roleId,

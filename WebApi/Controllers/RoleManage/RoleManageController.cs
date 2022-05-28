@@ -34,7 +34,7 @@ namespace WebApi.Controllers.RoleManage
         [Route(nameof(新增角色) + "/{name}")]
         public async Task 新增角色(string name)
         {
-            角色 新增角色 = await domainService_Role.新增角色_DBAsync(name);
+            _ = await domainService_Role.新增角色_DBAsync(name);
             await SaveAsync();
         }
 
@@ -72,7 +72,7 @@ namespace WebApi.Controllers.RoleManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(查询角色列表))]
-        public async Task<PagedList<角色>> 查询角色列表(查询角色列表_Dto inputDto)
+        public async Task<PagedList<PersonnelClassType>> 查询角色列表(查询角色列表_Dto inputDto)
         {
             return await domainService_Role.查询角色列表_DBAsync(inputDto.PageIndex, inputDto.PageSize);
         }
@@ -85,7 +85,7 @@ namespace WebApi.Controllers.RoleManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(获取指定角色信息) + "/{roleId}")]
-        public async Task<角色> 获取指定角色信息(string roleId)
+        public async Task<PersonnelClassType> 获取指定角色信息(string roleId)
         {
             return await domainService_Role.获取指定角色信息_DBAsync(roleId);
         }

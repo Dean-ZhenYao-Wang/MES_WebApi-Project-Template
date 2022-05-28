@@ -54,7 +54,7 @@ namespace WebApi.Controllers.AccountManage
         [Route(nameof(注册账号))]
         public async Task 注册账号(注册账号_Request inputDto)
         {
-            用户 people;
+            PersonType people;
 
             people = await domainService_Account.注册账号_DBAsync(inputDto.AccountNumber, inputDto.PassWord, inputDto.Name);
             await SaveAsync();
@@ -109,7 +109,7 @@ namespace WebApi.Controllers.AccountManage
         public class LoginRequest
         {
             public string Token { get; set; }
-            public 用户 Account { get; set; }
+            public PersonType Account { get; set; }
         }
 
         /// <summary>

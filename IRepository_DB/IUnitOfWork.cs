@@ -15,12 +15,8 @@ namespace IRepository_DB
     public partial interface IUnitOfWork : IDisposable
     {
         IRepository<菜单> 菜单 { get; }
-        IRepository<附件> 附件 { get; }
-        IRepository<角色> 角色 { get; }
         IRepository<角色_菜单> 角色_菜单s { get; }
         IRepository<用户_组织> 用户_组织s { get; }
-        IRepository<用户_角色> 用户_角色s { get; }
-        IRepository<用户> 用户 { get; }
         IRepository<组织> 组织 { get; }
 
         void Save();

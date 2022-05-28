@@ -10,11 +10,11 @@ namespace Service_Domain.Services
 {
     public class DomainService_Account : IDomainService_Account
     {
-        private readonly IRepository<用户> 用户;
+        private readonly IRepository<PersonType> 用户;
 
         public DomainService_Account(IUnitOfWork unitOfWork)
         {
-            用户 = unitOfWork.用户;
+            用户 = unitOfWork.Peoples;
         }
 
         /// <summary>
@@ -24,9 +24,9 @@ namespace Service_Domain.Services
         /// <param name="passWord">密码</param>
         /// <param name="name">姓名</param>
         /// <returns></returns>
-        public async Task<用户> 注册账号_DBAsync(string accountNumber, string passWord, string name)
+        public async Task<PersonType> 注册账号_DBAsync(string accountNumber, string passWord, string name)
         {
-            BaseDB.用户 account = new 用户
+            PersonType account = new PersonType
             {
                 Key = Guid.NewGuid().ToString(),
                 登录用户名 = accountNumber,
@@ -68,7 +68,7 @@ namespace Service_Domain.Services
         /// <param name="accountNumber">登录账号</param>
         /// <param name="passWord">密码</param>
         /// <returns></returns>
-        public async Task<用户> 登录Async(string accountNumber, string passWord)
+        public async Task<PersonType> 登录Async(string accountNumber, string passWord)
         {
             return await 用户.All()
                 .Where(m => m.IsDelete == false && m.登录用户名.Equals(accountNumber) && m.密码.Equals(passWord))

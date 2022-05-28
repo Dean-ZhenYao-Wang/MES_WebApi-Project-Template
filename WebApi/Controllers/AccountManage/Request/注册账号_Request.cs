@@ -37,14 +37,14 @@ namespace WebApi.Controllers.AccountManage.Request
             RuleFor(x => x.AccountNumber)
                 .MustAsync(async (x, ct) =>
                 {
-                    var tf = await dbCtx.用户.AnyAsync(m => m.登录用户名.Equals(x));
+                    var tf = await dbCtx.Peoples.AnyAsync(m => m.登录用户名.Equals(x));
                     return !tf;
                 })
                 .WithMessage(x => $"账号已存在");
             RuleFor(x => x.Name)
                 .MustAsync(async (x, ct) =>
                 {
-                    var tf = await dbCtx.用户.AnyAsync(m => m.昵称.Equals(x));
+                    var tf = await dbCtx.Peoples.AnyAsync(m => m.昵称.Equals(x));
                     return !tf;
                 })
                 .WithMessage(x => $"昵称已被占用");

@@ -30,6 +30,24 @@ namespace BaseDB
         public DbSet<PersonPropertyType> PeoplesProperties { get; set; }
         #endregion
 
+        /// <summary>
+        /// There are no comments for 用户_组织s property in the schema.
+        /// </summary>
+        public virtual DbSet<用户_组织> 用户_组织s
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// There are no comments for 组织 property in the schema.
+        /// </summary>
+        public virtual DbSet<组织> 组织
+        {
+            get;
+            set;
+        }
+
         #region Role-based equipment model
         public DbSet<EquipmentClassType> EquipmentClasses { get; set; }
         public DbSet<EquipmentClassPropertyType> EquipmentClassProperties { get; set; }
@@ -211,6 +229,8 @@ namespace BaseDB
         #endregion
         partial void CustomizeMapping(ref ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration<用户_组织>(new 用户_组织Configuration());
+            modelBuilder.ApplyConfiguration<组织>(new 组织Configuration());
             modelBuilder.ApplyConfiguration(new EquipmentClassPropertyTypeConfiguration());
             modelBuilder.ApplyConfiguration(new JobOrderTypeConfiguration());
             modelBuilder.ApplyConfiguration(new OperationsEventDefinitionTypeConfiguration());

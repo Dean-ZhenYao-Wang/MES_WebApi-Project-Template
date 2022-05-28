@@ -14,7 +14,7 @@ namespace Repository_DB
     public partial class EntityFrameworkUnitOfWork
     {
         private IRepository<HierarchyScopeType> _HierarchyScopeType;
-        public IRepository<HierarchyScopeType> HierarchyScopeType
+        public IRepository<HierarchyScopeType> HierarchyScopes
         {
             get
             {
@@ -27,7 +27,7 @@ namespace Repository_DB
         }
 
         private IRepository<ProductInformationType> _ProductInformationType;
-        public IRepository<ProductInformationType> ProductInformationType
+        public IRepository<ProductInformationType> ProductInformation
         {
             get
             {
@@ -40,7 +40,7 @@ namespace Repository_DB
         }
 
         private IRepository<ProductSegmentType> _ProductSegmentType;
-        public IRepository<ProductSegmentType> ProductSegmentType
+        public IRepository<ProductSegmentType> ProductSegments
         {
             get
             {
@@ -53,7 +53,7 @@ namespace Repository_DB
         }
 
         private IRepository<TestSpecificationType> _TestSpecificationType;
-        public IRepository<TestSpecificationType> TestSpecificationType
+        public IRepository<TestSpecificationType> TestSpecifications
         {
             get
             {
@@ -66,7 +66,7 @@ namespace Repository_DB
         }
 
         private IRepository<TestSpecificationPropertyType> _TestSpecificationPropertyType;
-        public IRepository<TestSpecificationPropertyType> TestSpecificationPropertyType
+        public IRepository<TestSpecificationPropertyType> TestSpecificationProperties
         {
             get
             {
@@ -79,7 +79,7 @@ namespace Repository_DB
         }
 
         private IRepository<TestSpecificationCriteriaType> _TestSpecificationCriteriaType;
-        public IRepository<TestSpecificationCriteriaType> TestSpecificationCriteriaType
+        public IRepository<TestSpecificationCriteriaType> TestSpecificationCriterias
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Repository_DB
         }
 
         private IRepository<TestSpecificationEvaluatedPropertyType> _TestSpecificationEvaluatedPropertyType;
-        public IRepository<TestSpecificationEvaluatedPropertyType> TestSpecificationEvaluatedPropertyType
+        public IRepository<TestSpecificationEvaluatedPropertyType> TestSpecificationEvaluatedProperties
         {
             get
             {
@@ -105,7 +105,7 @@ namespace Repository_DB
         }
 
         private IRepository<TestResultType> _TestResultType;
-        public IRepository<TestResultType> TestResultType
+        public IRepository<TestResultType> TestSpecificationResults
         {
             get
             {
@@ -118,7 +118,7 @@ namespace Repository_DB
         }
 
         private IRepository<PersonnelClassType> _PersonnelClassType;
-        public IRepository<PersonnelClassType> PersonnelClassType
+        public IRepository<PersonnelClassType> PersonnelClasses
         {
             get
             {
@@ -131,7 +131,7 @@ namespace Repository_DB
         }
 
         private IRepository<PersonnelClassPropertyType> _PersonnelClassPropertyType;
-        public IRepository<PersonnelClassPropertyType> PersonnelClassPropertyType
+        public IRepository<PersonnelClassPropertyType> PersonnelClassProperties
         {
             get
             {
@@ -144,7 +144,7 @@ namespace Repository_DB
         }
 
         private IRepository<PersonType> _PersonType;
-        public IRepository<PersonType> PersonType
+        public IRepository<PersonType> Peoples
         {
             get
             {
@@ -157,7 +157,7 @@ namespace Repository_DB
         }
 
         private IRepository<PersonPropertyType> _PersonPropertyType;
-        public IRepository<PersonPropertyType> PersonPropertyType
+        public IRepository<PersonPropertyType> PeoplesProperties
         {
             get
             {
@@ -170,7 +170,7 @@ namespace Repository_DB
         }
 
         private IRepository<EquipmentClassType> _EquipmentClassType;
-        public IRepository<EquipmentClassType> EquipmentClassType
+        public IRepository<EquipmentClassType> EquipmentClasses
         {
             get
             {
@@ -183,7 +183,7 @@ namespace Repository_DB
         }
 
         private IRepository<EquipmentClassPropertyType> _EquipmentClassPropertyType;
-        public IRepository<EquipmentClassPropertyType> EquipmentClassPropertyType
+        public IRepository<EquipmentClassPropertyType> EquipmentClassProperties
         {
             get
             {
@@ -196,7 +196,7 @@ namespace Repository_DB
         }
 
         private IRepository<EquipmentType> _EquipmentType;
-        public IRepository<EquipmentType> EquipmentType
+        public IRepository<EquipmentType> Equipments
         {
             get
             {
@@ -209,7 +209,7 @@ namespace Repository_DB
         }
 
         private IRepository<EquipmentPropertyType> _EquipmentPropertyType;
-        public IRepository<EquipmentPropertyType> EquipmentPropertyType
+        public IRepository<EquipmentPropertyType> EquipmentProperties
         {
             get
             {
@@ -222,7 +222,7 @@ namespace Repository_DB
         }
 
         private IRepository<PhysicalAssetClassType> _PhysicalAssetClassType;
-        public IRepository<PhysicalAssetClassType> PhysicalAssetClassType
+        public IRepository<PhysicalAssetClassType> PhysicalAssetClasses
         {
             get
             {
@@ -235,7 +235,7 @@ namespace Repository_DB
         }
 
         private IRepository<PhysicalAssetClassPropertyType> _PhysicalAssetClassPropertyType;
-        public IRepository<PhysicalAssetClassPropertyType> PhysicalAssetClassPropertyType
+        public IRepository<PhysicalAssetClassPropertyType> PhysicalAssetClassProperties
         {
             get
             {
@@ -248,7 +248,7 @@ namespace Repository_DB
         }
 
         private IRepository<PhysicalAssetType> _PhysicalAssetType;
-        public IRepository<PhysicalAssetType> PhysicalAssetType
+        public IRepository<PhysicalAssetType> PhysicalAssets
         {
             get
             {
@@ -261,7 +261,7 @@ namespace Repository_DB
         }
 
         private IRepository<PhysicalAssetPropertyType> _PhysicalAssetPropertyType;
-        public IRepository<PhysicalAssetPropertyType> PhysicalAssetPropertyType
+        public IRepository<PhysicalAssetPropertyType> PhysicalAssetProperties
         {
             get
             {
@@ -274,7 +274,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialClassType> _MaterialClassType;
-        public IRepository<MaterialClassType> MaterialClassType
+        public IRepository<MaterialClassType> MaterialClasses
         {
             get
             {
@@ -287,7 +287,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialClassPropertyType> _MaterialClassPropertyType;
-        public IRepository<MaterialClassPropertyType> MaterialClassPropertyType
+        public IRepository<MaterialClassPropertyType> MaterialClassProperties
         {
             get
             {
@@ -300,7 +300,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialDefinitionType> _MaterialDefinitionType;
-        public IRepository<MaterialDefinitionType> MaterialDefinitionType
+        public IRepository<MaterialDefinitionType> MaterialDefinitions
         {
             get
             {
@@ -313,7 +313,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialDefinitionPropertyType> _MaterialDefinitionPropertyType;
-        public IRepository<MaterialDefinitionPropertyType> MaterialDefinitionPropertyType
+        public IRepository<MaterialDefinitionPropertyType> MaterialDefinitionProperties
         {
             get
             {
@@ -326,7 +326,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialLotType> _MaterialLotType;
-        public IRepository<MaterialLotType> MaterialLotType
+        public IRepository<MaterialLotType> MaterialLots
         {
             get
             {
@@ -339,7 +339,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialLotPropertyType> _MaterialLotPropertyType;
-        public IRepository<MaterialLotPropertyType> MaterialLotPropertyType
+        public IRepository<MaterialLotPropertyType> MaterialLotProperties
         {
             get
             {
@@ -352,7 +352,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialSubLotType> _MaterialSubLotType;
-        public IRepository<MaterialSubLotType> MaterialSubLotType
+        public IRepository<MaterialSubLotType> MaterialSubLots
         {
             get
             {
@@ -365,7 +365,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationalLocationClassType> _OperationalLocationClassType;
-        public IRepository<OperationalLocationClassType> OperationalLocationClassType
+        public IRepository<OperationalLocationClassType> OperationalLocationClasses
         {
             get
             {
@@ -378,7 +378,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationalLocationClassPropertyType> _OperationalLocationClassPropertyType;
-        public IRepository<OperationalLocationClassPropertyType> OperationalLocationClassPropertyType
+        public IRepository<OperationalLocationClassPropertyType> OperationalLocationClassProperties
         {
             get
             {
@@ -391,7 +391,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationalLocationType> _OperationalLocationType;
-        public IRepository<OperationalLocationType> OperationalLocationType
+        public IRepository<OperationalLocationType> OperationalLocations
         {
             get
             {
@@ -404,7 +404,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationalLocationPropertyType> _OperationalLocationPropertyType;
-        public IRepository<OperationalLocationPropertyType> OperationalLocationPropertyType
+        public IRepository<OperationalLocationPropertyType> OperationalLocationProperties
         {
             get
             {
@@ -417,7 +417,7 @@ namespace Repository_DB
         }
 
         private IRepository<ProcessSegmentType> _ProcessSegmentType;
-        public IRepository<ProcessSegmentType> ProcessSegmentType
+        public IRepository<ProcessSegmentType> ProcessSegments
         {
             get
             {
@@ -430,7 +430,7 @@ namespace Repository_DB
         }
 
         private IRepository<PersonnelSegmentSpecificationType> _PersonnelSegmentSpecificationType;
-        public IRepository<PersonnelSegmentSpecificationType> PersonnelSegmentSpecificationType
+        public IRepository<PersonnelSegmentSpecificationType> PersonnelSegmentSpecifications
         {
             get
             {
@@ -443,7 +443,7 @@ namespace Repository_DB
         }
 
         private IRepository<PersonnelSegmentSpecificationPropertyType> _PersonnelSegmentSpecificationPropertyType;
-        public IRepository<PersonnelSegmentSpecificationPropertyType> PersonnelSegmentSpecificationPropertyType
+        public IRepository<PersonnelSegmentSpecificationPropertyType> PersonnelSegmentSpecificationProperties
         {
             get
             {
@@ -457,7 +457,7 @@ namespace Repository_DB
         }
 
         private IRepository<EquipmentSegmentSpecificationType> _EquipmentSegmentSpecificationType;
-        public IRepository<EquipmentSegmentSpecificationType> EquipmentSegmentSpecificationType
+        public IRepository<EquipmentSegmentSpecificationType> EquipmentSegmentSpecifications
         {
             get
             {
@@ -471,7 +471,7 @@ namespace Repository_DB
         }
 
         private IRepository<EquipmentSegmentSpecificationPropertyType> _EquipmentSegmentSpecificationPropertyType;
-        public IRepository<EquipmentSegmentSpecificationPropertyType> EquipmentSegmentSpecificationPropertyType
+        public IRepository<EquipmentSegmentSpecificationPropertyType> EquipmentSegmentSpecificationProperties
         {
             get
             {
@@ -485,7 +485,7 @@ namespace Repository_DB
         }
 
         private IRepository<PhysicalAssetSegmentSpecificationType> _PhysicalAssetSegmentSpecificationType;
-        public IRepository<PhysicalAssetSegmentSpecificationType> PhysicalAssetSegmentSpecificationType
+        public IRepository<PhysicalAssetSegmentSpecificationType> PhysicalAssetSegmentSpecifications
         {
             get
             {
@@ -499,7 +499,7 @@ namespace Repository_DB
         }
 
         private IRepository<PhysicalAssetSegmentSpecificationPropertyType> _PhysicalAssetSegmentSpecificationPropertyType;
-        public IRepository<PhysicalAssetSegmentSpecificationPropertyType> PhysicalAssetSegmentSpecificationPropertyType
+        public IRepository<PhysicalAssetSegmentSpecificationPropertyType> PhysicalAssetSegmentSpecificationProperties
         {
             get
             {
@@ -513,7 +513,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialSegmentSpecificationType> _MaterialSegmentSpecificationType;
-        public IRepository<MaterialSegmentSpecificationType> MaterialSegmentSpecificationType
+        public IRepository<MaterialSegmentSpecificationType> MaterialSegmentSpecifications
         {
             get
             {
@@ -527,7 +527,7 @@ namespace Repository_DB
         }
 
         private IRepository<MaterialSegmentSpecificationPropertyType> _MaterialSegmentSpecificationPropertyType;
-        public IRepository<MaterialSegmentSpecificationPropertyType> MaterialSegmentSpecificationPropertyType
+        public IRepository<MaterialSegmentSpecificationPropertyType> MaterialSegmentSpecificationProperties
         {
             get
             {
@@ -541,7 +541,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsEventClassType> _OperationsEventClassType;
-        public IRepository<OperationsEventClassType> OperationsEventClassType
+        public IRepository<OperationsEventClassType> OperationsEventClasses
         {
             get
             {
@@ -554,7 +554,8 @@ namespace Repository_DB
             }
         }
 
-        private IRepository<OperationsEventClassPropertyType> _OperationsEventClassPropertyType; public IRepository<OperationsEventClassPropertyType> OperationsEventClassPropertyType
+        private IRepository<OperationsEventClassPropertyType> _OperationsEventClassPropertyType; 
+        public IRepository<OperationsEventClassPropertyType> OperationsEventClassProperties
         {
             get
             {
@@ -568,7 +569,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsEventDefinitionType> _OperationsEventDefinitionType;
-        public IRepository<OperationsEventDefinitionType> OperationsEventDefinitionType
+        public IRepository<OperationsEventDefinitionType> OperationsEventDefinitions
         {
             get
             {
@@ -582,7 +583,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsEventType> _OperationsEventType;
-        public IRepository<OperationsEventType> OperationsEventType
+        public IRepository<OperationsEventType> OperationsEvents
         {
             get
             {
@@ -596,7 +597,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsEventPropertyType> _OperationsEventPropertyType;
-        public IRepository<OperationsEventPropertyType> OperationsEventPropertyType
+        public IRepository<OperationsEventPropertyType> OperationsEventProperties
         {
             get
             {
@@ -610,7 +611,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsCapabilityType> _OperationsCapabilityType;
-        public IRepository<OperationsCapabilityType> OperationsCapabilityType
+        public IRepository<OperationsCapabilityType> OperationsCapabilities
         {
             get
             {
@@ -624,7 +625,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpProcessSegmentCapabilityType> _OpProcessSegmentCapabilityType;
-        public IRepository<OpProcessSegmentCapabilityType> OpProcessSegmentCapabilityType
+        public IRepository<OpProcessSegmentCapabilityType> OpProcessSegmentCapabilityProperties
         {
             get
             {
@@ -638,7 +639,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpOperationsSegmentCapabilityType> _OpOperationsSegmentCapabilityType;
-        public IRepository<OpOperationsSegmentCapabilityType> OpOperationsSegmentCapabilityType
+        public IRepository<OpOperationsSegmentCapabilityType> OpOperationsSegmentCapabilities
         {
             get
             {
@@ -652,7 +653,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelCapabilityType> _OpPersonnelCapabilityType;
-        public IRepository<OpPersonnelCapabilityType> OpPersonnelCapabilityType
+        public IRepository<OpPersonnelCapabilityType> OpPersonnelCapabilities
         {
             get
             {
@@ -666,7 +667,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelCapabilityPropertyType> _OpPersonnelCapabilityPropertyType;
-        public IRepository<OpPersonnelCapabilityPropertyType> OpPersonnelCapabilityPropertyType
+        public IRepository<OpPersonnelCapabilityPropertyType> OpPersonnelCapabilityProperties
         {
             get
             {
@@ -680,7 +681,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentCapabilityType> _OpEquipmentCapabilityType;
-        public IRepository<OpEquipmentCapabilityType> OpEquipmentCapabilityType
+        public IRepository<OpEquipmentCapabilityType> OpEquipmentCapabilities
         {
             get
             {
@@ -694,7 +695,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentCapabilityPropertyType> _OpEquipmentCapabilityPropertyType;
-        public IRepository<OpEquipmentCapabilityPropertyType> OpEquipmentCapabilityPropertyType
+        public IRepository<OpEquipmentCapabilityPropertyType> OpEquipmentCapabilityProperties
         {
             get
             {
@@ -708,7 +709,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetCapabilityType> _OpPhysicalAssetCapabilityType;
-        public IRepository<OpPhysicalAssetCapabilityType> OpPhysicalAssetCapabilityType
+        public IRepository<OpPhysicalAssetCapabilityType> OpPhysicalAssetCapabilities
         {
             get
             {
@@ -722,7 +723,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetCapabilityPropertyType> _OpPhysicalAssetCapabilityPropertyType;
-        public IRepository<OpPhysicalAssetCapabilityPropertyType> OpPhysicalAssetCapabilityPropertyType
+        public IRepository<OpPhysicalAssetCapabilityPropertyType> OpPhysicalAssetCapabilityProperties
         {
             get
             {
@@ -736,7 +737,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialCapabilityType> _OpMaterialCapabilityType;
-        public IRepository<OpMaterialCapabilityType> OpMaterialCapabilityType
+        public IRepository<OpMaterialCapabilityType> OpMaterialCapabilities
         {
             get
             {
@@ -750,7 +751,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialCapabilityPropertyType> _OpMaterialCapabilityPropertyType;
-        public IRepository<OpMaterialCapabilityPropertyType> OpMaterialCapabilityPropertyType
+        public IRepository<OpMaterialCapabilityPropertyType> OpMaterialCapabilityProperties
         {
             get
             {
@@ -764,7 +765,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsDefinitionType> _OperationsDefinitionType;
-        public IRepository<OperationsDefinitionType> OperationsDefinitionType
+        public IRepository<OperationsDefinitionType> OperationsDefinitions
         {
             get
             {
@@ -778,7 +779,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsMaterialBillType> _OperationsMaterialBillType;
-        public IRepository<OperationsMaterialBillType> OperationsMaterialBillType
+        public IRepository<OperationsMaterialBillType> OperationsMaterialBills
         {
             get
             {
@@ -792,7 +793,7 @@ namespace Repository_DB
         }
 
         private IRepository<SegmentDependencyType> _SegmentDependencyType;
-        public IRepository<SegmentDependencyType> SegmentDependencyType
+        public IRepository<SegmentDependencyType> SegmentDependencies
         {
             get
             {
@@ -806,7 +807,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsSegmentType> _OperationsSegmentType;
-        public IRepository<OperationsSegmentType> OperationsSegmentType
+        public IRepository<OperationsSegmentType> OperationsSegments
         {
             get
             {
@@ -820,7 +821,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsMaterialBillItemType> _OperationsMaterialBillItemType;
-        public IRepository<OperationsMaterialBillItemType> OperationsMaterialBillItemType
+        public IRepository<OperationsMaterialBillItemType> OperationsMaterialBillItems
         {
             get
             {
@@ -834,7 +835,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelSpecificationType> _OpPersonnelSpecificationType;
-        public IRepository<OpPersonnelSpecificationType> OpPersonnelSpecificationType
+        public IRepository<OpPersonnelSpecificationType> OpPersonnelSpecifications
         {
             get
             {
@@ -848,7 +849,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelSpecificationPropertyType> _OpPersonnelSpecificationPropertyType;
-        public IRepository<OpPersonnelSpecificationPropertyType> OpPersonnelSpecificationPropertyType
+        public IRepository<OpPersonnelSpecificationPropertyType> OpPersonnelSpecificationProperties
         {
             get
             {
@@ -862,7 +863,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentSpecificationType> _OpEquipmentSpecificationType;
-        public IRepository<OpEquipmentSpecificationType> OpEquipmentSpecificationType
+        public IRepository<OpEquipmentSpecificationType> OpEquipmentSpecifications
         {
             get
             {
@@ -876,7 +877,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentSpecificationPropertyType> _OpEquipmentSpecificationPropertyType;
-        public IRepository<OpEquipmentSpecificationPropertyType> OpEquipmentSpecificationPropertyType
+        public IRepository<OpEquipmentSpecificationPropertyType> OpEquipmentSpecificationProperties
         {
             get
             {
@@ -890,7 +891,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetSpecificationType> _OpPhysicalAssetSpecificationType;
-        public IRepository<OpPhysicalAssetSpecificationType> OpPhysicalAssetSpecificationType
+        public IRepository<OpPhysicalAssetSpecificationType> OpPhysicalAssetSpecifications
         {
             get
             {
@@ -904,7 +905,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetSpecificationPropertyType> _OpPhysicalAssetSpecificationPropertyType;
-        public IRepository<OpPhysicalAssetSpecificationPropertyType> OpPhysicalAssetSpecificationPropertyType
+        public IRepository<OpPhysicalAssetSpecificationPropertyType> OpPhysicalAssetSpecificationProperties
         {
             get
             {
@@ -918,7 +919,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialSpecificationType> _OpMaterialSpecificationType;
-        public IRepository<OpMaterialSpecificationType> OpMaterialSpecificationType
+        public IRepository<OpMaterialSpecificationType> OpMaterialSpecifications
         {
             get
             {
@@ -932,7 +933,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialSpecificationPropertyType> _OpMaterialSpecificationPropertyType;
-        public IRepository<OpMaterialSpecificationPropertyType> OpMaterialSpecificationPropertyType
+        public IRepository<OpMaterialSpecificationPropertyType> OpMaterialSpecificationProperties
         {
             get
             {
@@ -946,7 +947,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsScheduleType> _OperationsScheduleType;
-        public IRepository<OperationsScheduleType> OperationsScheduleType
+        public IRepository<OperationsScheduleType> OperationsSchedules
         {
             get
             {
@@ -960,7 +961,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsRequestType> _OperationsRequestType;
-        public IRepository<OperationsRequestType> OperationsRequestType
+        public IRepository<OperationsRequestType> OperationsRequests
         {
             get
             {
@@ -974,7 +975,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpSegmentRequirementType> _OpSegmentRequirementType;
-        public IRepository<OpSegmentRequirementType> OpSegmentRequirementType
+        public IRepository<OpSegmentRequirementType> OpSegmentRequirements
         {
             get
             {
@@ -988,7 +989,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelRequirementType> _OpPersonnelRequirementType;
-        public IRepository<OpPersonnelRequirementType> OpPersonnelRequirementType
+        public IRepository<OpPersonnelRequirementType> OpPersonnelRequirements
         {
             get
             {
@@ -1002,7 +1003,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelRequirementPropertyType> _OpPersonnelRequirementPropertyType;
-        public IRepository<OpPersonnelRequirementPropertyType> OpPersonnelRequirementPropertyType
+        public IRepository<OpPersonnelRequirementPropertyType> OpPersonnelRequirementProperties
         {
             get
             {
@@ -1016,7 +1017,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentRequirementType> _OpEquipmentRequirementType;
-        public IRepository<OpEquipmentRequirementType> OpEquipmentRequirementType
+        public IRepository<OpEquipmentRequirementType> OpEquipmentRequirements
         {
             get
             {
@@ -1030,7 +1031,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentRequirementPropertyType> _OpEquipmentRequirementPropertyType;
-        public IRepository<OpEquipmentRequirementPropertyType> OpEquipmentRequirementPropertyType
+        public IRepository<OpEquipmentRequirementPropertyType> OpEquipmentRequirementProperties
         {
             get
             {
@@ -1044,7 +1045,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetRequirementType> _OpPhysicalAssetRequirementType;
-        public IRepository<OpPhysicalAssetRequirementType> OpPhysicalAssetRequirementType
+        public IRepository<OpPhysicalAssetRequirementType> OpPhysicalAssetRequirements
         {
             get
             {
@@ -1054,7 +1055,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetRequirementPropertyType> _OpPhysicalAssetRequirementPropertyType;
-        public IRepository<OpPhysicalAssetRequirementPropertyType> OpPhysicalAssetRequirementPropertyType
+        public IRepository<OpPhysicalAssetRequirementPropertyType> OpPhysicalAssetRequirementProperties
         {
             get
             {
@@ -1064,7 +1065,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialRequirementType> _OpMaterialRequirementType;
-        public IRepository<OpMaterialRequirementType> OpMaterialRequirementType
+        public IRepository<OpMaterialRequirementType> OpMaterialRequirements
         {
             get
             {
@@ -1074,7 +1075,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialRequirementPropertyType> _OpMaterialRequirementPropertyType;
-        public IRepository<OpMaterialRequirementPropertyType> OpMaterialRequirementPropertyType
+        public IRepository<OpMaterialRequirementPropertyType> OpMaterialRequirementProperties
         {
             get
             {
@@ -1084,7 +1085,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsPerformanceType> _OperationsPerformanceType;
-        public IRepository<OperationsPerformanceType> OperationsPerformanceType
+        public IRepository<OperationsPerformanceType> OperationsPerformances
         {
             get
             {
@@ -1094,7 +1095,7 @@ namespace Repository_DB
         }
 
         private IRepository<OperationsResponseType> _OperationsResponseType;
-        public IRepository<OperationsResponseType> OperationsResponseType
+        public IRepository<OperationsResponseType> OperationsResponses
         {
             get
             {
@@ -1104,7 +1105,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpSegmentResponseType> _OpSegmentResponseType;
-        public IRepository<OpSegmentResponseType> OpSegmentResponseType
+        public IRepository<OpSegmentResponseType> OpSegmentResponses
         {
             get
             {
@@ -1114,7 +1115,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpSegmentDataType> _OpSegmentDataType;
-        public IRepository<OpSegmentDataType> OpSegmentDataType
+        public IRepository<OpSegmentDataType> OpSegmentDatas
         {
             get
             {
@@ -1124,7 +1125,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelActualType> _OpPersonnelActualType;
-        public IRepository<OpPersonnelActualType> OpPersonnelActualType
+        public IRepository<OpPersonnelActualType> OpPersonnelActuals
         {
             get
             {
@@ -1134,7 +1135,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPersonnelActualPropertyType> _OpPersonnelActualPropertyType;
-        public IRepository<OpPersonnelActualPropertyType> OpPersonnelActualPropertyType
+        public IRepository<OpPersonnelActualPropertyType> OpPersonnelActualProperties
         {
             get
             {
@@ -1144,7 +1145,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentActualType> _OpEquipmentActualType;
-        public IRepository<OpEquipmentActualType> OpEquipmentActualType
+        public IRepository<OpEquipmentActualType> OpEquipmentActuals
         {
             get
             {
@@ -1154,7 +1155,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpEquipmentActualPropertyType> _OpEquipmentActualPropertyType;
-        public IRepository<OpEquipmentActualPropertyType> OpEquipmentActualPropertyType
+        public IRepository<OpEquipmentActualPropertyType> OpEquipmentActualProperties
         {
             get
             {
@@ -1164,7 +1165,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetActualType> _OpPhysicalAssetActualType;
-        public IRepository<OpPhysicalAssetActualType> OpPhysicalAssetActualType
+        public IRepository<OpPhysicalAssetActualType> OpPhysicalAssetActuals
         {
             get
             {
@@ -1174,7 +1175,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpPhysicalAssetActualPropertyType> _OpPhysicalAssetActualPropertyType;
-        public IRepository<OpPhysicalAssetActualPropertyType> OpPhysicalAssetActualPropertyType
+        public IRepository<OpPhysicalAssetActualPropertyType> OpPhysicalAssetActualProperties
         {
             get
             {
@@ -1184,7 +1185,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialActualType> _OpMaterialActualType;
-        public IRepository<OpMaterialActualType> OpMaterialActualType
+        public IRepository<OpMaterialActualType> OpMaterialActuals
         {
             get
             {
@@ -1194,7 +1195,7 @@ namespace Repository_DB
         }
 
         private IRepository<OpMaterialActualPropertyType> _OpMaterialActualPropertyType;
-        public IRepository<OpMaterialActualPropertyType> OpMaterialActualPropertyType
+        public IRepository<OpMaterialActualPropertyType> OpMaterialActualProperties
         {
             get
             {
@@ -1204,7 +1205,7 @@ namespace Repository_DB
         }
 
         private IRepository<ResourceRelationshipNetworkType> _ResourceRelationshipNetworkType;
-        public IRepository<ResourceRelationshipNetworkType> ResourceRelationshipNetworkType
+        public IRepository<ResourceRelationshipNetworkType> ResourceRelationshipNetworks
         {
             get
             {
@@ -1214,7 +1215,7 @@ namespace Repository_DB
         }
 
         private IRepository<RRNPropertyType> _RRNPropertyType;
-        public IRepository<RRNPropertyType> RRNPropertyType
+        public IRepository<RRNPropertyType> ResourceRelationshipNetworkProperties
         {
             get
             {
@@ -1224,7 +1225,7 @@ namespace Repository_DB
         }
 
         private IRepository<ResourceNetworkConnectionType> _ResourceNetworkConnectionType;
-        public IRepository<ResourceNetworkConnectionType> ResourceNetworkConnectionType
+        public IRepository<ResourceNetworkConnectionType> ResourceNetworkConnections
         {
             get
             {
@@ -1234,7 +1235,7 @@ namespace Repository_DB
         }
 
         private IRepository<RNCPropertyType> _RNCPropertyType;
-        public IRepository<RNCPropertyType> RNCPropertyType
+        public IRepository<RNCPropertyType> ResourceNetworkConnectionProperties
         {
             get
             {
@@ -1244,7 +1245,7 @@ namespace Repository_DB
         }
 
         private IRepository<ResourceNetworkConnectionTypeType> _ResourceNetworkConnectionTypeType;
-        public IRepository<ResourceNetworkConnectionTypeType> ResourceNetworkConnectionTypeType
+        public IRepository<ResourceNetworkConnectionTypeType> ResourceNetworkConnectionTypes
         {
             get
             {
@@ -1254,7 +1255,7 @@ namespace Repository_DB
         }
 
         private IRepository<RNCTypePropertyType> _RNCTypePropertyType;
-        public IRepository<RNCTypePropertyType> RNCTypePropertyType
+        public IRepository<RNCTypePropertyType> ResourceNetworkConnectionTypeProperties
         {
             get
             {
@@ -1264,7 +1265,7 @@ namespace Repository_DB
         }
 
         private IRepository<ResourceReferenceType> _ResourceReferenceType;
-        public IRepository<ResourceReferenceType> ResourceReferenceType
+        public IRepository<ResourceReferenceType> ResourceReferences
         {
             get
             {
@@ -1274,7 +1275,7 @@ namespace Repository_DB
         }
 
         private IRepository<ResourceReferencePropertyType> _ResourceReferencePropertyType;
-        public IRepository<ResourceReferencePropertyType> ResourceReferencePropertyType
+        public IRepository<ResourceReferencePropertyType> ResourceReferencesProperties
         {
             get
             {
@@ -1284,7 +1285,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkAlertDefinitionType> _WorkAlertDefinitionType;
-        public IRepository<WorkAlertDefinitionType> WorkAlertDefinitionType
+        public IRepository<WorkAlertDefinitionType> WorkAlertDefinitions
         {
             get
             {
@@ -1294,7 +1295,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkAlertDefinitionPropertyType> _WorkAlertDefinitionPropertyType;
-        public IRepository<WorkAlertDefinitionPropertyType> WorkAlertDefinitionPropertyType
+        public IRepository<WorkAlertDefinitionPropertyType> WorkAlertDefinitionProperties
         {
             get
             {
@@ -1304,7 +1305,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkAlertType> _WorkAlertType;
-        public IRepository<WorkAlertType> WorkAlertType
+        public IRepository<WorkAlertType> WorkAlerts
         {
             get
             {
@@ -1314,7 +1315,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkAlertPropertyType> _WorkAlertPropertyType;
-        public IRepository<WorkAlertPropertyType> WorkAlertPropertyType
+        public IRepository<WorkAlertPropertyType> WorkAlertProperties
         {
             get
             {
@@ -1328,7 +1329,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarDefinitionEntryType> _WorkCalendarDefinitionEntryType;
-        public IRepository<WorkCalendarDefinitionEntryType> WorkCalendarDefinitionEntryType
+        public IRepository<WorkCalendarDefinitionEntryType> WorkCalendarDefinitionEntries
         {
             get
             {
@@ -1338,7 +1339,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarDefinitionEntryPropertyType> _WorkCalendarDefinitionEntryPropertyType;
-        public IRepository<WorkCalendarDefinitionEntryPropertyType> WorkCalendarDefinitionEntryPropertyType
+        public IRepository<WorkCalendarDefinitionEntryPropertyType> WorkCalendarDefinitionEntryProperties
         {
             get
             {
@@ -1348,7 +1349,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarDefinitionType> _WorkCalendarDefinitionType;
-        public IRepository<WorkCalendarDefinitionType> WorkCalendarDefinitionType
+        public IRepository<WorkCalendarDefinitionType> WorkCalendarDefinitions
         {
             get
             {
@@ -1358,7 +1359,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarDefinitionPropertyType> _WorkCalendarDefinitionPropertyType;
-        public IRepository<WorkCalendarDefinitionPropertyType> WorkCalendarDefinitionPropertyType
+        public IRepository<WorkCalendarDefinitionPropertyType> WorkCalendarDefinitionProperties
         {
             get
             {
@@ -1368,7 +1369,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarType> _WorkCalendarType;
-        public IRepository<WorkCalendarType> WorkCalendarType
+        public IRepository<WorkCalendarType> WorkCalendars
         {
             get
             {
@@ -1378,7 +1379,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarPropertyType> _WorkCalendarPropertyType;
-        public IRepository<WorkCalendarPropertyType> WorkCalendarPropertyType
+        public IRepository<WorkCalendarPropertyType> WorkCalendarProperties
         {
             get
             {
@@ -1388,7 +1389,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarEntryType> _WorkCalendarEntryType;
-        public IRepository<WorkCalendarEntryType> WorkCalendarEntryType
+        public IRepository<WorkCalendarEntryType> WorkCalendarEntries
         {
             get
             {
@@ -1398,7 +1399,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCalendarEntryPropertyType> _WorkCalendarEntryPropertyType;
-        public IRepository<WorkCalendarEntryPropertyType> WorkCalendarEntryPropertyType
+        public IRepository<WorkCalendarEntryPropertyType> WorkCalendarEntryProperties
         {
             get
             {
@@ -1412,7 +1413,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkCapabilityType> _WorkCapabilityType;
-        public IRepository<WorkCapabilityType> WorkCapabilityType
+        public IRepository<WorkCapabilityType> WorkCapabilities
         {
             get
             {
@@ -1422,7 +1423,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkMasterCapabilityType> _WorkMasterCapabilityType;
-        public IRepository<WorkMasterCapabilityType> WorkMasterCapabilityType
+        public IRepository<WorkMasterCapabilityType> WorkMasterCapabilities
         {
             get
             {
@@ -1436,7 +1437,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkMasterType> _WorkMasterType;
-        public IRepository<WorkMasterType> WorkMasterType
+        public IRepository<WorkMasterType> WorkMasters
         {
             get
             {
@@ -1450,7 +1451,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkDirectiveType> _WorkDirectiveType;
-        public IRepository<WorkDirectiveType> WorkDirectiveType
+        public IRepository<WorkDirectiveType> WorkDirectives
         {
             get
             {
@@ -1464,7 +1465,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationType> _WorkflowSpecificationType;
-        public IRepository<WorkflowSpecificationType> WorkflowSpecificationType
+        public IRepository<WorkflowSpecificationType> WorkflowSpecifications
         {
             get
             {
@@ -1478,7 +1479,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkRecordType> _WorkRecordType;
-        public IRepository<WorkRecordType> WorkRecordType
+        public IRepository<WorkRecordType> WorkRecords
         {
             get
             {
@@ -1488,7 +1489,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkRecordEntryType> _WorkRecordEntryType;
-        public IRepository<WorkRecordEntryType> WorkRecordEntryType
+        public IRepository<WorkRecordEntryType> WorkRecordEntries
         {
             get
             {
@@ -1502,7 +1503,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkScheduleType> _WorkScheduleType;
-        public IRepository<WorkScheduleType> WorkScheduleType
+        public IRepository<WorkScheduleType> WorkSchedules
         {
             get
             {
@@ -1512,7 +1513,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkRequestType> _WorkRequestType;
-        public IRepository<WorkRequestType> WorkRequestType
+        public IRepository<WorkRequestType> WorkRequests
         {
             get
             {
@@ -1522,7 +1523,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkResponseType> _WorkResponseType;
-        public IRepository<WorkResponseType> WorkResponseType
+        public IRepository<WorkResponseType> WorkResponses
         {
             get
             {
@@ -1532,7 +1533,7 @@ namespace Repository_DB
         }
 
         private IRepository<JobOrderType> _JobOrderType;
-        public IRepository<JobOrderType> JobOrderType
+        public IRepository<JobOrderType> JobOrders
         {
             get
             {
@@ -1542,7 +1543,7 @@ namespace Repository_DB
         }
 
         private IRepository<JobResponseType> _JobResponseType;
-        public IRepository<JobResponseType> JobResponseType
+        public IRepository<JobResponseType> JobResponses
         {
             get
             {
@@ -1552,7 +1553,7 @@ namespace Repository_DB
         }
 
         private IRepository<JobListType> _JobListType;
-        public IRepository<JobListType> JobListType
+        public IRepository<JobListType> JobLists
         {
             get
             {
@@ -1562,7 +1563,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkPerformanceType> _WorkPerformanceType;
-        public IRepository<WorkPerformanceType> WorkPerformanceType
+        public IRepository<WorkPerformanceType> WorkPerformances
         {
             get
             {
@@ -1572,7 +1573,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationPropertyType> _WorkflowSpecificationPropertyType;
-        public IRepository<WorkflowSpecificationPropertyType> WorkflowSpecificationPropertyType
+        public IRepository<WorkflowSpecificationPropertyType> WorkflowSpecificationProperties
         {
             get
             {
@@ -1582,7 +1583,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationNodeTypeType> _WorkflowSpecificationNodeTypeType;
-        public IRepository<WorkflowSpecificationNodeTypeType> WorkflowSpecificationNodeTypeType
+        public IRepository<WorkflowSpecificationNodeTypeType> SpecificationNodeTypes
         {
             get
             {
@@ -1592,7 +1593,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationNodeTypePropertyType> _WorkflowSpecificationNodeTypePropertyType;
-        public IRepository<WorkflowSpecificationNodeTypePropertyType> WorkflowSpecificationNodeTypePropertyType
+        public IRepository<WorkflowSpecificationNodeTypePropertyType> WorkflowSpecificationNodeTypeProperties
         {
             get
             {
@@ -1602,7 +1603,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationNodeType> _WorkflowSpecificationNodeType;
-        public IRepository<WorkflowSpecificationNodeType> WorkflowSpecificationNodeType
+        public IRepository<WorkflowSpecificationNodeType> SpecificationNodes
         {
             get
             {
@@ -1612,7 +1613,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationNodePropertyType> _WorkflowSpecificationNodePropertyType;
-        public IRepository<WorkflowSpecificationNodePropertyType> WorkflowSpecificationNodePropertyType
+        public IRepository<WorkflowSpecificationNodePropertyType> WorkflowSpecificationNodeProperties
         {
             get
             {
@@ -1622,7 +1623,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationConnectionType> _WorkflowSpecificationConnectionType;
-        public IRepository<WorkflowSpecificationConnectionType> WorkflowSpecificationConnectionType
+        public IRepository<WorkflowSpecificationConnectionType> WorkflowSpecificationConnections
         {
             get
             {
@@ -1632,7 +1633,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationConnectionPropertyType> _WorkflowSpecificationConnectionPropertyType;
-        public IRepository<WorkflowSpecificationConnectionPropertyType> WorkflowSpecificationConnectionPropertyType
+        public IRepository<WorkflowSpecificationConnectionPropertyType> WorkflowSpecificationConnectionProperties
         {
             get
             {
@@ -1642,7 +1643,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationConnectionTypeType> _WorkflowSpecificationConnectionTypeType;
-        public IRepository<WorkflowSpecificationConnectionTypeType> WorkflowSpecificationConnectionTypeType
+        public IRepository<WorkflowSpecificationConnectionTypeType> WorkflowSpecificationConnectionTypes
         {
             get
             {
@@ -1652,7 +1653,7 @@ namespace Repository_DB
         }
 
         private IRepository<WorkflowSpecificationConnectionTypePropertyType> _WorkflowSpecificationConnectionTypePropertyType;
-        public IRepository<WorkflowSpecificationConnectionTypePropertyType> WorkflowSpecificationConnectionTypePropertyType
+        public IRepository<WorkflowSpecificationConnectionTypePropertyType> WorkflowSpecificationConnectionTypeProperties
         {
             get
             {

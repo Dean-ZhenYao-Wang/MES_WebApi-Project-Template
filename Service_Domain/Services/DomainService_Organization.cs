@@ -44,7 +44,7 @@ namespace Service_Domain.Services
 
         public async Task 新增组织_DBAsync(string 编号, int 序号, string 名称, string 全名, string 上一级组织的Id)
         {
-            BaseDB.组织 org = new 组织
+            组织 org = new 组织
             {
                 Key = Guid.NewGuid().ToString(),
                 名称 = 名称,

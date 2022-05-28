@@ -9,13 +9,13 @@ namespace BaseDB
         {
             context.Database.EnsureCreated();
 
-            if (context.用户.Any())
+            if (context.Peoples.Any())
             {
                 return;
             }
 
             var adminKey = Guid.NewGuid().ToString();
-            用户 admin = new 用户()
+            PersonType admin = new PersonType()
             {
                 Key = adminKey,
                 登录用户名 = "admin",
@@ -25,7 +25,7 @@ namespace BaseDB
                 CreateUser = Guid.Empty.ToString()
             };
 
-            context.用户.Add(admin);
+            context.Peoples.Add(admin);
             context.SaveChanges();
         }
     }

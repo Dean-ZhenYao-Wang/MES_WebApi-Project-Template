@@ -13,20 +13,18 @@ namespace Service_Domain.Services
 {
     public class DomainService_People : IDomainService_People
     {
-        private readonly IRepository<用户> 用户;
+        private readonly IRepository<PersonType> 用户;
         private readonly IRepository<用户_组织> 用户所属组织;
-        private readonly IRepository<用户_角色> 用户与角色间的构成关系;
 
         public DomainService_People(IUnitOfWork unitOfWork)
         {
-            用户 = unitOfWork.用户;
+            用户 = unitOfWork.Peoples;
             用户所属组织 = unitOfWork.用户_组织s;
-            用户与角色间的构成关系 = unitOfWork.用户_角色s;
         }
 
-        public async Task<用户> 新增用户_DBAsync(string accountNumber, string name, List<string> list_OrgId, List<string> list_RoleId)
+        public async Task<PersonType> 新增用户_DBAsync(string accountNumber, string name, List<string> list_OrgId, List<string> list_RoleId)
         {
-            BaseDB.用户 people = new 用户
+            PersonType people = new PersonType
             {
                 Key = Guid.NewGuid().ToString(),
                 登录用户名 = accountNumber,
@@ -37,10 +35,10 @@ namespace Service_Domain.Services
             await 用户.AddAsync(people);
             if (list_OrgId != null && list_OrgId.Any())
             {
-                List<BaseDB.用户_组织> people_X_Organizations = new List<BaseDB.用户_组织>();
+                List<用户_组织> people_X_Organizations = new List<用户_组织>();
                 list_OrgId.ForEach(orgId =>
                         {
-                            var p_x_o = new BaseDB.用户_组织
+                            var p_x_o = new 用户_组织
                             {
                                 Key = Guid.NewGuid().ToString(),
                                 用户Key = people.Key,
@@ -53,20 +51,15 @@ namespace Service_Domain.Services
             }
             if (list_RoleId != null && list_RoleId.Any())
             {
-                List<BaseDB.用户_角色> people_X_Roles = new List<BaseDB.用户_角色>();
+                people.PersonnelClassID = new List<IdentifierType>();
                 list_RoleId.ForEach(roleId =>
                         {
-                            var p_x_r = new BaseDB.用户_角色
+                            people.PersonnelClassID.Add(new IdentifierType
                             {
-                                Key = Guid.NewGuid().ToString(),
-                                用户Key = people.Key,
-                                角色Key = roleId
-                            };
-                            p_x_r.记录创建人及创建时间();
-                            people_X_Roles.Add(p_x_r);
+                                Value = roleId
+                            });
                         });
 
-                await 用户与角色间的构成关系.AddRangeAsync(people_X_Roles);
             }
             return people;
         }
@@ -80,11 +73,11 @@ namespace Service_Domain.Services
             });
         }
 
-        public async Task<PagedList<用户>> 查询用户列表_DBAsync(int pageIndex, int pageSize, bool? isDelete = null)
+        public async Task<PagedList<PersonType>> 查询用户列表_DBAsync(int pageIndex, int pageSize, bool? isDelete = null)
         {
             return await 用户.All()
                 .Where(m => isDelete == null || m.IsDelete == isDelete)
-                .Select(m => new 用户
+                .Select(m => new PersonType
                 {
                     Key = m.Key,
                     昵称 = m.昵称,
@@ -96,7 +89,6 @@ namespace Service_Domain.Services
                     年龄 = m.年龄,
                     生日 = m.生日,
                     所属的组织列表 = m.所属的组织列表.Where(m => m.IsDelete == false).ToList(),
-                    拥有的角色列表 = m.拥有的角色列表.Where(o => o.IsDelete == false).ToList(),
                     CreateDate = m.CreateDate,
                     CreateUser = m.CreateUser,
                     UpdateDate = m.UpdateDate,

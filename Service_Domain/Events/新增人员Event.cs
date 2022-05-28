@@ -5,9 +5,9 @@ namespace Service_Domain
 {
     public class 新增用户Event : INotification
     {
-        public 用户 People { get; }
+        public PersonType People { get; }
 
-        public 新增用户Event(用户 people)
+        public 新增用户Event(PersonType people)
         {
             People = people;
         }

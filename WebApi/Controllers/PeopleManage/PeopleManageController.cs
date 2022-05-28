@@ -35,7 +35,7 @@ namespace WebApi.Controllers.PeopleManage
         [Route(nameof(新增用户))]
         public async Task 新增用户(新增用户_Dto inputDto)
         {
-            用户 people;
+            PersonType people;
             people = await domainService_People.新增用户_DBAsync(inputDto.AccountNumber, inputDto.Name, inputDto.List_OrgId, inputDto.List_RoleId);
             await SaveAsync();
             await Publish(new 新增用户Event(people));
@@ -76,7 +76,7 @@ namespace WebApi.Controllers.PeopleManage
         /// <returns></returns>
         [HttpPost]
         [Route(nameof(查询用户列表))]
-        public async Task<PagedList<用户>> 查询用户列表(查询用户列表_Dto inputDto)
+        public async Task<PagedList<PersonType>> 查询用户列表(查询用户列表_Dto inputDto)
         {
             return await domainService_People.查询用户列表_DBAsync(inputDto.PageIndex, inputDto.PageSize, inputDto.IsDelete);
         }

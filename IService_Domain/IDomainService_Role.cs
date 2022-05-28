@@ -11,11 +11,11 @@ namespace IService_Domain
 
         Task 删除角色_DBAsync(string roleId);
 
-        Task<角色> 新增角色_DBAsync(string name);
+        Task<PersonnelClassType> 新增角色_DBAsync(string name);
 
-        Task<PagedList<角色>> 查询角色列表_DBAsync(int pageIndex, int pageSize, bool? isDelete = null);
+        Task<PagedList<PersonnelClassType>> 查询角色列表_DBAsync(int pageIndex, int pageSize, bool? isDelete = null);
 
-        Task<角色> 获取指定角色信息_DBAsync(string roleId);
+        Task<PersonnelClassType> 获取指定角色信息_DBAsync(string roleId);
 
         Task 设置角色可访问菜单_DBAsync(string roleId, List<string> list_MenuId);
     }

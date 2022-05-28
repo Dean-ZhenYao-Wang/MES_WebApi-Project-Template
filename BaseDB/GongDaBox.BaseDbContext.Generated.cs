@@ -82,63 +82,9 @@ namespace BaseDB
         }
 
         /// <summary>
-        /// There are no comments for 附件 property in the schema.
-        /// </summary>
-        public virtual DbSet<附件> 附件
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// There are no comments for 角色 property in the schema.
-        /// </summary>
-        public virtual DbSet<角色> 角色
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
         /// There are no comments for 角色_菜单s property in the schema.
         /// </summary>
         public virtual DbSet<角色_菜单> 角色_菜单s
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// There are no comments for 用户_组织s property in the schema.
-        /// </summary>
-        public virtual DbSet<用户_组织> 用户_组织s
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// There are no comments for 用户_角色s property in the schema.
-        /// </summary>
-        public virtual DbSet<用户_角色> 用户_角色s
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// There are no comments for 用户 property in the schema.
-        /// </summary>
-        public virtual DbSet<用户> 用户
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// There are no comments for 组织 property in the schema.
-        /// </summary>
-        public virtual DbSet<组织> 组织
         {
             get;
             set;
@@ -152,13 +98,7 @@ namespace BaseDB
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration<菜单>(new 菜单Configuration());
-            modelBuilder.ApplyConfiguration<附件>(new 附件Configuration());
-            modelBuilder.ApplyConfiguration<角色>(new 角色Configuration());
             modelBuilder.ApplyConfiguration<角色_菜单>(new 角色_菜单Configuration());
-            modelBuilder.ApplyConfiguration<用户_组织>(new 用户_组织Configuration());
-            modelBuilder.ApplyConfiguration<用户_角色>(new 用户_角色Configuration());
-            modelBuilder.ApplyConfiguration<用户>(new 用户Configuration());
-            modelBuilder.ApplyConfiguration<组织>(new 组织Configuration());
             CustomizeMapping(ref modelBuilder);
         }
 
