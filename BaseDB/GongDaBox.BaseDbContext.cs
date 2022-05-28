@@ -1,17 +1,4 @@
-﻿using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Common;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace BaseDB
 {
@@ -20,6 +7,11 @@ namespace BaseDB
     {
         #region Hierarchy scope model
         public DbSet<HierarchyScopeType> HierarchyScopes { get; set; }
+        #endregion
+
+        #region Product model
+        public DbSet<ProductInformationType> ProductInformation { get; set; }
+        public DbSet<ProductSegmentType> ProductSegments { get; set; }
         #endregion
 
         #region Test specification model
@@ -102,6 +94,7 @@ namespace BaseDB
         public DbSet<OpMaterialCapabilityType> OpMaterialCapabilities { get; set; }
         public DbSet<OpMaterialCapabilityPropertyType> OpMaterialCapabilityProperties { get; set; }
         #endregion
+
         #region Operations definition model
         public DbSet<OperationsDefinitionType> OperationsDefinitions { get; set; }
         public DbSet<OperationsMaterialBillType> OperationsMaterialBills { get; set; }
@@ -212,9 +205,25 @@ namespace BaseDB
         public DbSet<WorkflowSpecificationNodeType> SpecificationNodes { get; set; }
         public DbSet<WorkflowSpecificationNodePropertyType> WorkflowSpecificationNodeProperties { get; set; }
         public DbSet<WorkflowSpecificationConnectionType> WorkflowSpecificationConnections { get; set; }
-        public DbSet<WorkflowSpecificationConnectionPropertyType> WorkflowSpecificationConnectionProperties { get; set; }   
+        public DbSet<WorkflowSpecificationConnectionPropertyType> WorkflowSpecificationConnectionProperties { get; set; }
         public DbSet<WorkflowSpecificationConnectionTypeType> WorkflowSpecificationConnectionTypes { get; set; }
-        public DbSet<WorkflowSpecificationConnectionTypePropertyType> WorkflowSpecificationConnectionTypeProperties { get; set; }   
+        public DbSet<WorkflowSpecificationConnectionTypePropertyType> WorkflowSpecificationConnectionTypeProperties { get; set; }
         #endregion
+        partial void CustomizeMapping(ref ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new EquipmentClassPropertyTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new JobOrderTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new OperationsEventDefinitionTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new OperationsEventTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new OperationsRequestTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new ProcessSegmentTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new TestSpecificationCriteriaTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new WorkAlertDefinitionTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new WorkAlertTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new WorkRequestTypeConfiguration());
+        }
     }
+
+
+
 }

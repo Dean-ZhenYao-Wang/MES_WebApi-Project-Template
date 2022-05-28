@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using Util.Model;
 
 [Owned]
 public partial class ErrorMessageType
@@ -111,9 +113,9 @@ public class BatchProductionRecordEntryType
 
 public partial class OperationsEventType
 {
-    public OperationsEventPropertyType[] OperationsEventProperty { get; set; }
+    public virtual List<OperationsEventPropertyType> OperationsEventProperty { get; set; }
 }
 
-public partial class OperationsEventPropertyType
+public partial class OperationsEventPropertyType : Base_Entity
 {
 }

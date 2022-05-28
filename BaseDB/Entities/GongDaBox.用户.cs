@@ -9,17 +9,17 @@ namespace BaseDB
     {
         public void 修改登录用户名(string accountNumber)
         {
-            this.登录用户名 = accountNumber;
+            登录用户名 = accountNumber;
         }
 
         public void 修改密码(string passWord)
         {
-            this.密码 = passWord;
+            密码 = passWord;
         }
 
         public void 修改昵称(string name)
         {
-            this.昵称 = name;
+            昵称 = name;
         }
 
         public void 修改用户信息(string accountNumber, string passWord, string name, List<string> list_OrgId, List<string> list_RoleId)
@@ -27,7 +27,7 @@ namespace BaseDB
             修改登录用户名(accountNumber);
             修改密码(passWord);
             修改昵称(name);
-            var list_OldOrg = this.所属的组织列表
+            var list_OldOrg = 所属的组织列表
                .Where(m => m.IsDelete == false && m.用户Key.Equals(Key))
                .ToList();
 
@@ -54,7 +54,7 @@ namespace BaseDB
                             组织Key = orgId
                         };
                         r_x_o.记录创建人及创建时间();
-                        this.所属的组织列表.Add(r_x_o);
+                        所属的组织列表.Add(r_x_o);
                     }
                 });
 
@@ -65,7 +65,7 @@ namespace BaseDB
                 });
             }
 
-            var list_OldRole = this.拥有的角色列表
+            var list_OldRole = 拥有的角色列表
                 .Where(m => m.IsDelete == false && m.用户Key.Equals(Key))
                 .ToList();
 
@@ -93,7 +93,7 @@ namespace BaseDB
                             角色Key = roleId
                         };
                         r_x_r.记录创建人及创建时间();
-                        this.拥有的角色列表.Add(r_x_r);
+                        拥有的角色列表.Add(r_x_r);
                     }
                 });
 
@@ -107,12 +107,12 @@ namespace BaseDB
 
         public override void 删除()
         {
-            var listRole = this.拥有的角色列表.Where(m => m.IsDelete == false && m.用户Key.Equals(Key)).ToList();
+            var listRole = 拥有的角色列表.Where(m => m.IsDelete == false && m.用户Key.Equals(Key)).ToList();
             listRole.ForEach(m =>
             {
                 m.删除();
             });
-            var listOrg = this.所属的组织列表.Where(m => m.IsDelete == false && m.用户Key.Equals(Key)).ToList();
+            var listOrg = 所属的组织列表.Where(m => m.IsDelete == false && m.用户Key.Equals(Key)).ToList();
             listOrg.ForEach(m =>
             {
                 m.删除();

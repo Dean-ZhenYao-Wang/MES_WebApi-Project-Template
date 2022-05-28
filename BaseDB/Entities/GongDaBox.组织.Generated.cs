@@ -40,7 +40,7 @@ namespace BaseDB
         /// <summary>
         /// There are no comments for Key in the schema.
         /// </summary>
-        public virtual string Key { get; set; }
+        public new string Key { get; set; }
 
         /// <summary>
         /// There are no comments for 编号 in the schema.

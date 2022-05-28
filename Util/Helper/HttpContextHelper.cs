@@ -18,9 +18,11 @@ namespace Util
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             if (context.User.Claims.Any())
+            {
                 CurrentLoginUser = context.User.Claims
                         .FirstOrDefault(m => m.Type.Equals("currentLoginUser"))
                         .Value.DeserializeDynamicJsonObject();
+            }
 
             await next(context);
         }

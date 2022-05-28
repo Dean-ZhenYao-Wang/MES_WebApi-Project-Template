@@ -16,8 +16,8 @@ namespace Service_Domain.Services
 
         public DomainService_Menu(IUnitOfWork unitOfWork)
         {
-            this.菜单 = unitOfWork.菜单;
-            this.角色的可访问菜单 = unitOfWork.角色_菜单s;
+            菜单 = unitOfWork.菜单;
+            角色的可访问菜单 = unitOfWork.角色_菜单s;
         }
 
         public async Task 新增菜单_DBAsync(string name, string url, string 编号, int 序号, string iCON, string 上级菜单Id)

@@ -22,7 +22,7 @@ namespace Repository_DB
         public EntityFrameworkRepository(DbContext context)
         {
             this.context = context ?? throw new ArgumentNullException("context");
-            this.objectSet = context.Set<T>();
+            objectSet = context.Set<T>();
         }
 
         public virtual IQueryable<T> All()
@@ -48,12 +48,6 @@ namespace Repository_DB
             objectSet.Remove(entity);
         }
 
-        public DbContext Context
-        {
-            get
-            {
-                return context;
-            }
-        }
+        public DbContext Context => context;
     }
 }

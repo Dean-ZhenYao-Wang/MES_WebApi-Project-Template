@@ -7,8 +7,8 @@ namespace Service_Domain
     {
         public 修改密码Event(Guid accountId, string passWord)
         {
-            this.AccountId = accountId;
-            this.PassWord = passWord;
+            AccountId = accountId;
+            PassWord = passWord;
         }
 
         public Guid AccountId { get; }

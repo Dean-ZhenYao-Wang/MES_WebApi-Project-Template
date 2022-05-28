@@ -11,7 +11,8 @@ namespace Util.Model
         private string updateUser;
         private DateTime? updateDate;
         private string remark;
-
+        [Key]
+        public string Key { get; set; }
         /// <summary>
         /// 是否删除
         /// </summary>
@@ -64,16 +65,16 @@ namespace Util.Model
 
         public virtual void 记录创建人及创建时间()
         {
-            this.CreateUser = HttpContextHelper.CurrentLoginUser.Key;
-            this.CreateDate = DateTime.Now;
-            this.UpdateUser = this.CreateUser;
-            this.UpdateDate = this.CreateDate;
+            CreateUser = HttpContextHelper.CurrentLoginUser.Key;
+            CreateDate = DateTime.Now;
+            UpdateUser = CreateUser;
+            UpdateDate = CreateDate;
         }
 
         public virtual void 记录修改人及修改时间()
         {
-            this.UpdateUser = HttpContextHelper.CurrentLoginUser.Key;
-            this.UpdateDate = DateTime.Now;
+            UpdateUser = HttpContextHelper.CurrentLoginUser.Key;
+            UpdateDate = DateTime.Now;
         }
     }
 }

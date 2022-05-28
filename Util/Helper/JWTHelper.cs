@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-
-namespace Util
+﻿namespace Util
 {
     // <summary>
     /// JWT帮助类

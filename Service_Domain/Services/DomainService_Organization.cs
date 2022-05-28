@@ -16,8 +16,8 @@ namespace Service_Domain.Services
 
         public DomainService_Organization(IUnitOfWork unitOfWork)
         {
-            this.组织 = unitOfWork.组织;
-            this.用户所属组织 = unitOfWork.用户_组织s;
+            组织 = unitOfWork.组织;
+            用户所属组织 = unitOfWork.用户_组织s;
         }
 
         public async Task 修改组织_DBAsync(string orgId, string 编号, int 序号, string 名称, string 全名, string 上一级组织的Id)

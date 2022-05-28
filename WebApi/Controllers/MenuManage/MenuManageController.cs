@@ -3,7 +3,6 @@ using IRepository_DB;
 using IService_Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -71,7 +70,7 @@ namespace WebApi.Controllers.MenuManage
         [HttpGet]
         public async Task<List<菜单>> Get()
         {
-            var data= await domainService_Menu.获取菜单列表_DBAsync();
+            var data = await domainService_Menu.获取菜单列表_DBAsync();
             return data;
         }
 

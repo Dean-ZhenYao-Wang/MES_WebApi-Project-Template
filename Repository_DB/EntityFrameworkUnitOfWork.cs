@@ -44,13 +44,7 @@ namespace Repository_DB
             this.context = context ?? throw new ArgumentNullException("context");
         }
 
-        public DbContext Context
-        {
-            get
-            {
-                return context;
-            }
-        }
+        public DbContext Context => context;
 
         protected virtual void CloseContext()
         {
@@ -67,14 +61,14 @@ namespace Repository_DB
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!this.disposed)
+            if (!disposed)
             {
                 if (disposing)
                 {
                     CloseContext();
                 }
             }
-            this.disposed = true;
+            disposed = true;
         }
 
         public void Dispose()
@@ -92,7 +86,10 @@ namespace Repository_DB
             get
             {
                 if (_菜单 == null)
+                {
                     _菜单 = new EntityFrameworkRepository<菜单>(context);
+                }
+
                 return _菜单;
             }
         }
@@ -102,7 +99,10 @@ namespace Repository_DB
             get
             {
                 if (_附件 == null)
+                {
                     _附件 = new EntityFrameworkRepository<附件>(context);
+                }
+
                 return _附件;
             }
         }
@@ -112,7 +112,10 @@ namespace Repository_DB
             get
             {
                 if (_角色 == null)
+                {
                     _角色 = new EntityFrameworkRepository<角色>(context);
+                }
+
                 return _角色;
             }
         }
@@ -122,7 +125,10 @@ namespace Repository_DB
             get
             {
                 if (_角色_菜单s == null)
+                {
                     _角色_菜单s = new EntityFrameworkRepository<角色_菜单>(context);
+                }
+
                 return _角色_菜单s;
             }
         }
@@ -132,7 +138,10 @@ namespace Repository_DB
             get
             {
                 if (_用户_组织s == null)
+                {
                     _用户_组织s = new EntityFrameworkRepository<用户_组织>(context);
+                }
+
                 return _用户_组织s;
             }
         }
@@ -142,7 +151,10 @@ namespace Repository_DB
             get
             {
                 if (_用户_角色s == null)
+                {
                     _用户_角色s = new EntityFrameworkRepository<用户_角色>(context);
+                }
+
                 return _用户_角色s;
             }
         }
@@ -152,7 +164,10 @@ namespace Repository_DB
             get
             {
                 if (_用户 == null)
+                {
                     _用户 = new EntityFrameworkRepository<用户>(context);
+                }
+
                 return _用户;
             }
         }
@@ -162,7 +177,10 @@ namespace Repository_DB
             get
             {
                 if (_组织 == null)
+                {
                     _组织 = new EntityFrameworkRepository<组织>(context);
+                }
+
                 return _组织;
             }
         }
@@ -170,7 +188,10 @@ namespace Repository_DB
         public virtual void Save()
         {
             if (context == null)
+            {
                 throw new InvalidOperationException("Context has not been initialized.");
+            }
+
             context.SaveChanges();
         }
 

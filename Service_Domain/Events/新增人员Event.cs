@@ -9,7 +9,7 @@ namespace Service_Domain
 
         public 新增用户Event(用户 people)
         {
-            this.People = people;
+            People = people;
         }
     }
 }

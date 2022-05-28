@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -120,7 +119,10 @@ namespace Util
                 }
                 return list;
             }
-            else return new JsonTextAccessor(element);
+            else
+            {
+                return new JsonTextAccessor(element);
+            }
         }
     }
 }

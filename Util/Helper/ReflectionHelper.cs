@@ -207,8 +207,16 @@ namespace Util.Helper
             public override bool Equals(Assembly? x, Assembly? y)
 #pragma warning restore CS8632 // 只能在 "#nullable" 注释上下文内的代码中使用可为 null 的引用类型的注释。
             {
-                if (x == null && y == null) return true;
-                if (x == null || y == null) return false;
+                if (x == null && y == null)
+                {
+                    return true;
+                }
+
+                if (x == null || y == null)
+                {
+                    return false;
+                }
+
                 return AssemblyName.ReferenceMatchesDefinition(x.GetName(), y.GetName());
             }
 

@@ -14,7 +14,7 @@ namespace Service_Domain.Services
 
         public DomainService_Account(IUnitOfWork unitOfWork)
         {
-            this.用户 = unitOfWork.用户;
+            用户 = unitOfWork.用户;
         }
 
         /// <summary>

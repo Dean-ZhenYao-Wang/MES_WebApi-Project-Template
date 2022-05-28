@@ -19,9 +19,9 @@ namespace Service_Domain.Services
 
         public DomainService_People(IUnitOfWork unitOfWork)
         {
-            this.用户 = unitOfWork.用户;
-            this.用户所属组织 = unitOfWork.用户_组织s;
-            this.用户与角色间的构成关系 = unitOfWork.用户_角色s;
+            用户 = unitOfWork.用户;
+            用户所属组织 = unitOfWork.用户_组织s;
+            用户与角色间的构成关系 = unitOfWork.用户_角色s;
         }
 
         public async Task<用户> 新增用户_DBAsync(string accountNumber, string name, List<string> list_OrgId, List<string> list_RoleId)

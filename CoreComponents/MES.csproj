@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="B2MML-AllExtensions_AllSchemas.cs~RF5f22010.TMP" />
     <None Remove="B2MML-AllExtensions_AllSchemas.cs~RFe69962.TMP" />
     <None Remove="xwxcevyp.zuf~" />
     <None Remove="公共组件元素.cs~RF5346f8.TMP" />

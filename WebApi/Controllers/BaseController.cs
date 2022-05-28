@@ -24,7 +24,7 @@ namespace WebApi.Controllers
         {
             this.unitOfWork = unitOfWork;
             this.mediator = mediator;
-            this.CurrentLoginUser = HttpContextHelper.CurrentLoginUser;
+            CurrentLoginUser = HttpContextHelper.CurrentLoginUser;
         }
 
         /// <summary>

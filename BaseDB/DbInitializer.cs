@@ -10,7 +10,10 @@ namespace BaseDB
             context.Database.EnsureCreated();
 
             if (context.用户.Any())
+            {
                 return;
+            }
+
             var adminKey = Guid.NewGuid().ToString();
             用户 admin = new 用户()
             {

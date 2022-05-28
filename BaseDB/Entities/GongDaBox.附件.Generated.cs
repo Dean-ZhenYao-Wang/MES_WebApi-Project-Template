@@ -40,7 +40,7 @@ namespace BaseDB
         /// <summary>
         /// 业务主键
         /// </summary>
-        public virtual string Key { get; set; }
+        public new string Key { get; set; }
 
         /// <summary>
         /// 业务分类

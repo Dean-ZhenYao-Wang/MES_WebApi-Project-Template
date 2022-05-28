@@ -18,8 +18,8 @@ namespace Service_Domain.Services
 
         public DomainService_Role(IUnitOfWork unitOfWork)
         {
-            this.角色 = unitOfWork.角色;
-            this.角色的可访问菜单 = unitOfWork.角色_菜单s;
+            角色 = unitOfWork.角色;
+            角色的可访问菜单 = unitOfWork.角色_菜单s;
         }
 
         public async Task<角色> 新增角色_DBAsync(string name)

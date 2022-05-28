@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using System;
 using System.Collections.Generic;
 
 namespace Service_Domain
@@ -10,7 +9,7 @@ namespace Service_Domain
 
         public 删除用户Event(List<string> listPeopleId)
         {
-            this.ListPeopleId = listPeopleId;
+            ListPeopleId = listPeopleId;
         }
     }
 }

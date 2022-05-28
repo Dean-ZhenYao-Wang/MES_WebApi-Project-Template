@@ -32,7 +32,10 @@ namespace Repository_DB
         public virtual IUnitOfWork Create()
         {
             if (context == null)
+            {
                 throw new InvalidOperationException("Context has not been initialized.");
+            }
+
             return new EntityFrameworkUnitOfWork(context);
         }
 

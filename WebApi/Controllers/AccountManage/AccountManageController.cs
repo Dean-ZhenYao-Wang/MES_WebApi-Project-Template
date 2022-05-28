@@ -14,7 +14,6 @@ using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Text.Unicode;
 using System.Threading.Tasks;
 using Util;
 using WebApi.Controllers.AccountManage.Request;
@@ -73,9 +72,11 @@ namespace WebApi.Controllers.AccountManage
         [AllowAnonymous]
         public async Task<AjaxResult<string>> 登录(登录_Dto inputDto)
         {
-            var account = await this.domainService_Account.登录Async(inputDto.AccountNumber, inputDto.PassWord);
+            var account = await domainService_Account.登录Async(inputDto.AccountNumber, inputDto.PassWord);
             if (account == null)
+            {
                 throw new BusinessException("用户名或密码错误");
+            }
 
             var jwtConfig = configuration.GetSection("Jwt");
             //秘钥，就是标头，这里用Hmacsha256算法，需要256bit的密钥
